@@ -159,7 +159,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
             <h2 class="text-7xl font-bold text-shark-950">What people think about RAFIKey</h2>
           </div>
         </div>
-        <div class="flex gap-8 w-10/12 mx-auto ">
+        <div class="flex gap-8 w-full xl:w-11/12 mx-auto ">
           <div class="border-black border-2 rounded-3xl p-10 space-y-6">
             <div class="flex justify-between">
               <div class="flex gap-4">
@@ -169,7 +169,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
                   <span class="text-2xl text-gray-400">Machakos</span>
                 </div>
               </div>
-              <div>
+              <div class="w-8 xl:w-12">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
@@ -189,7 +189,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
                   <span class="text-2xl text-gray-400">Machakos</span>
                 </div>
               </div>
-              <div>
+              <div class="w-8 xl:w-12">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
@@ -209,7 +209,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
                   <span class="text-2xl text-gray-400">Machakos</span>
                 </div>
               </div>
-              <div>
+              <div class="w-8 xl:w-12">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
@@ -226,13 +226,13 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 <!--    fithth slide-->
     <section class="h-screen snap-start flex items-center w-10/12 mx-auto">
-      <div class="w-full">
-        <div class="w-full">
-          <p>Blog</p>
-          <h2>Latest post</h2>
+      <div class="w-full space-y-10">
+        <div class="w-full flex flex-col items-center space-y-4 pt-20">
+          <p class="text-cerise-500 text-2xl">Blog</p>
+          <h2 class="text-shark-950 text-5xl font-bold">Latest post</h2>
         </div>
-        <div class="flex justify-between">
-          <div class="w-full">
+        <div class="flex gap-12 items-stretch">
+          <div class="flex w-5/6">
             <img  src="@/assets/images/home-8.png" alt="blog-post-image"/>
           </div>
           <div class="space-y-8">
