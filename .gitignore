@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Build artifacts in public folder
+public/assets/*.js
+public/assets/*.css
