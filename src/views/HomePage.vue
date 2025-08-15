@@ -378,50 +378,61 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div class="w-10/12 mx-auto lg:hidden  lg:h-screen pt-10 md:pt-32 ">
-
-          <div class="flex flex-col items-center space-y-4 pb-10 ">
-            <div>
-              <p class="text-cerise-600 font-bold text-lg">Testimonials</p>
-            </div>
-            <div class="md:w-1/2 w-3/4">
-              <h2 class="text-2xl font-extrabold text-shark-950 text-center">
-                What people think about RAFIKey
-              </h2>
-            </div>
+      <div class="lg:hidden relative  py-12 w-full">
+        <div class="flex flex-col items-center space-y-4 pb-10">
+          <div>
+            <p class="text-cerise-600  font-pt-sans-bold text-[16px]">Testimonials</p>
           </div>
-          <Swiper :navigation="true" :modules="[Navigation]" class="mySwiper">
-            <SwiperSlide
-              class="flex justify-center items-center"
-              v-for="item in carouselInfo"
-              :key="item.id"
-            >
-              <div class="flex flex-col w-3/4 mx-auto space-y-4 bg-white rounded-xl shadow-xl p-6">
-                <div class="flex justify-between">
-                  <div class="flex gap-4">
-                    <img
-                      :src="item.avatorSrc"
-                      alt="testimonial-image"
-                      class="w-16 h-16 rounded-full"
-                    />
-                    <div class="flex flex-col justify-center">
-                      <p class="text-nowrap text-sm font-bold text-shark-950">{{ item.name }}</p>
-                      <span class="text-xs text-gray-400">{{ item.location }}</span>
-                    </div>
-                  </div>
-                  <div class="w-4 md:w-8 xl:w-12">
-                    <img src="@/assets/images/quotes.png" />
+          <div class="md:w-1/2 w-3/4">
+            <h2 class="text-[24px] leading-[27px]  tracking-[-3%] font-changa-one ">
+              What people think about RAFIKey
+            </h2>
+          </div>
+        </div>
+        <div class="flex justify-between w-full mb-4 ">
+          <button ref="prevEl" class="absolute top-[60%] md:left-20  sm:left-5  left-3 custom-swiper-prev text-casablanca-400">
+            <span class="material-icons-outlined">arrow_back_ios_new</span>
+
+          </button>
+          <button ref="nextEl" class="absolute top-[60%] md:right-20  sm:right-5 right-3 custom-swiper-next text-casablanca-400">
+            <span class="material-icons-outlined">arrow_forward_ios</span>
+          </button>
+        </div>
+
+        <Swiper
+           :modules="[Navigation]"  :navigation="navigationOptions"  class="relative my-swipe md:w-[70%] w-[80%] rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.25)] ">
+
+          <SwiperSlide
+            class="flex justify-center items-center"
+            v-for="item in carouselInfo"
+            :key="item.id"
+          >
+            <div class="flex flex-col w-3/4 mx-auto space-y-4 bg-white rounded-xl  p-6">
+              <div class="flex justify-between">
+                <div class="flex gap-4">
+                  <img
+                    :src="item.avatorSrc"
+                    alt="testimonial-image"
+                    class="w-16 h-16 rounded-full"
+                  />
+                  <div class="flex flex-col justify-center">
+                    <p class="text-nowrap  font-pt-sans-bold text-[16px] text-textColorTwo">{{ item.name }}</p>
+                    <span class="font-pt-sans-regular opacity-[60%] text-[12px] text-bodyText">{{ item.location }}</span>
                   </div>
                 </div>
-                <div>
-                  <p class="text-gray-400 text-sm">
-                    {{ item.testimonial }}
-                  </p>
+                <div class="md:w-[55px] md:h-[43px] w-[20px] h-[20px]">
+                  <img src="@/assets/images/quotes.png" />
                 </div>
               </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
+              <div>
+                <p class="text-[15px] font-pt-sans-regular leading-[24px] tracking-[0%] text-bodyText">
+                  {{ item.testimonial }}
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </section>
 
     <!--    fifth slide-->
