@@ -68,128 +68,113 @@ onMounted(async () => {
   }
   await nextTick()
 
-
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".panel-1", // The container element for the panels
-//       start: "top top", // Start when the top of the container hits the top of the viewport
-//       // end: "+=300%", // End after scrolling 300% of the viewport height
-//       scrub: 1, // Smoothly link the animation to the scroll position
-//       pin: true, // Pin the container during the animation
-//       pinSpacing: false,
-//       // toggleActions: "restart none restart none"
-//     },
-//   });
-//   // const tl = gsap.timeline()
-//   tl.to(".panel-1", { xPercent: -500 })
-//   .to(".panel-2", { xPercent: 500 }, "<")
-//   .to(".panel-3", {
-//     xPercent: 0,
-//     duration: 3,
-//     rotate: 0,
-//     scrollTrigger: {
-//       trigger: ".panel-3",
-//       start: "top top", // Adjust offset to delay until navigation leaves
-//       scrub: 4,
-//       // end: "bottom 70",
-//       // markers: true, // Optional: for debugging
-//     },
-//   })
-//
-//   gsap.utils.toArray(".section").forEach((element) => {
-//     ScrollTrigger.create({
-//       trigger: element as HTMLDivElement,
-//       start: "top top",
-//       // end: "bottom bottom",
-//       pin: true,
-//       pinSpacing: false,
-//       scrub: 1,
-//     })
-//   })
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".panel-1", // The container element for the panels
+  //       start: "top top", // Start when the top of the container hits the top of the viewport
+  //       // end: "+=300%", // End after scrolling 300% of the viewport height
+  //       scrub: 1, // Smoothly link the animation to the scroll position
+  //       pin: true, // Pin the container during the animation
+  //       pinSpacing: false,
+  //       // toggleActions: "restart none restart none"
+  //     },
+  //   });
+  //   // const tl = gsap.timeline()
+  //   tl.to(".panel-1", { xPercent: -500 })
+  //   .to(".panel-2", { xPercent: 500 }, "<")
+  //   .to(".panel-3", {
+  //     xPercent: 0,
+  //     duration: 3,
+  //     rotate: 0,
+  //     scrollTrigger: {
+  //       trigger: ".panel-3",
+  //       start: "top top", // Adjust offset to delay until navigation leaves
+  //       scrub: 4,
+  //       // end: "bottom 70",
+  //       // markers: true, // Optional: for debugging
+  //     },
+  //   })
+  //
+  //   gsap.utils.toArray(".section").forEach((element) => {
+  //     ScrollTrigger.create({
+  //       trigger: element as HTMLDivElement,
+  //       start: "top top",
+  //       // end: "bottom bottom",
+  //       pin: true,
+  //       pinSpacing: false,
+  //       scrub: 1,
+  //     })
+  //   })
 })
 </script>
 <template>
-  <div class="panel h-screen hide-scrollbar space-y-2 overflow-x-hidden">
-    <section class="h-screen bg-white overflow-hidden  text-white w-full">
-      <div class="w-10/12 mx-auto flex items-center justify-center">
-        <div class="panel-1 h-screen lg:gap-12 space-y-4 lg:space-y-0 flex flex-col pt-8 lg:pt-0 lg:justify-center">
-          <div class="tracking-widest space-y-4 lg:w-3/5 w-full pt-20">
-            <div class="flex justify-center lg:justify-start">
-              <p
-                class="text-deep-cove-950 font-extrabold w-4/5 lg:w-full text-center lg:text-start leading-tight xl:!text-6xl lg:!text-5xl !text-2xl"
-              >
-                A safe space for
-                <span
-                  class="font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-shark-950 to-cerise-600"
-                  >SRHR</span
-                >
-                info and services.
-              </p>
-            </div>
-
-            <div class="flex lg:hidden  justify-center">
-              <div class="w-2/5">
-                <img src="@/assets/images/home-1.png" alt="rafikey-image" />
-              </div>
-            </div>
-          </div>
-          <div class="flex xl:text-xl text-sm lg:w-3/5 w-3/4 mx-auto lg:mx-0 text-center lg:text-start">
-            <p class="text-stone-400">
-              RAFIKEY, HELPS YOU MAKE INFORMED CHOICES - FROM CONTRACEPTION AND STI TESTING TO
-              UNDERSTANDING CONSENT - WHILE PROTECTING YOUR PRIVACY EVERY STEP OF THE WAY.
-            </p>
-          </div>
-          <div
-            class="border-4 flex xl:w-4/5 lg:w-3/5 md:w-2/5 w-full mx-auto lg:mx-0 justify-between items-center rounded-full py-2 xl:px-6 px-3 border-cerise-600 bg-shark-950"
+  <div class="panel overflow-hidden">
+    <section class="xl:h-screen lg:px-[80px]  overflow-hidden flex  lg:justify-between justify-center  w-full">
+      <div class="panel-1 lg:pt-[166px]  py-20  space-y-16 sm:space-y-10 lg:space-y-0">
+        <div class="lg:w-[519px] w-[241px] mx-auto  font-changa-one ">
+          <p
+            class="text-deep-cove-950 text-center lg:text-start lg:leading-[74px] leading-[32px] tracking-[3%] lg:!text-[79px] !text-[24px]"
           >
-            <div>
-              <span class="material-icons-outlined xl:!text-5xl !text-4xl">search</span>
-            </div>
-            <div>
-              <span class="xl:text-2xl text-sm text-nowrap">Nearest clinic for STI testing</span>
-            </div>
-            <div class="bg-stone-200 rounded-full xl:p-2 p-1 flex">
-              <span class="material-icons-outlined text-shark-950">arrow_upward</span>
-            </div>
+            A safe space for
+            <span
+              class="font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-shark-950 to-cerise-600"
+              >SRHR</span
+            >
+            info and services.
+          </p>
+        </div>
+
+        <div class="flex lg:hidden justify-center">
+          <div class="w-3/5">
+            <img src="@/assets/images/home-1.png" alt="rafikey-image" />
           </div>
-          <div class="flex justify-center lg:justify-start gap-4">
+        </div>
+
+        <div class="flex lg:w-[519px] w-full md:w-3/4 px-7 lg:px-0 mx-auto h-[69px]  lg:pt-[32px] leading-[150%] text-center lg:text-start">
+          <p class="font-outfit lg:text-[15px] text-[13px] font-[400] text-bodyText">
+            RAFIKEY, HELPS YOU MAKE INFORMED CHOICES - FROM CONTRACEPTION AND STI TESTING TO
+            UNDERSTANDING CONSENT - WHILE PROTECTING YOUR PRIVACY EVERY STEP OF THE WAY.
+          </p>
+        </div>
+        <div class="lg:pt-20 ">
+          <div class="top-[670px]  lg:h-[63px] h-[49px] flex justify-center lg:justify-start lg:gap-[24px] gap-4">
             <button
               @click="registerHandler"
-              class="btn btn-sm bg-shark-950 xl:py-8 py-6 xl:px-16 px-10 rounded-xl">
-              <span class="text-white font-semibold text-nowrap lg:text-xl text-lg">Start Chat</span>
+              class="btn btn-sm h-full backdrop-blur-sm   shadow-[0_0_50px_0px] shadow-navBarShadowBackground/50 bg-shark-950 py-[16px] lg:px-[48px] px-8 rounded-[8px]"
+            >
+              <span
+                class="text-white font-pt-sans-regular font-semibold text-nowrap lg:text-xl text-lg"
+                >Start Chat</span
+              >
             </button>
-            <button class="btn btn-sm bg-casablanca-300 xl:py-8 py-6 xl:px-16 px-10 rounded-xl">
+            <button
+              class="btn btn-sm h-full font-pt-sans-regular bg-casablanca-300 py-[16px] lg:px-[48px] px-8 rounded-[8px]"
+            >
               <span class="text-white font-semibold lg:text-xl text-lg">More Info</span>
             </button>
           </div>
         </div>
-        <div class="panel-2 h-screen w-full justify-end items-center hidden lg:flex">
-          <div class="flex items-center justify-center xl:w-3/5 w-full">
-            <img src="@/assets/images/home-1.png" alt="rafikey-image" />
-          </div>
+      </div>
+      <div class="panel-2 hidden xl:h-screen pt-[45px] w-[681px] h-[711px] lg:flex justify-center  items-center ">
+        <div class="xl:w-[568px] xl:h-[568px] w-[380px] h-[380px] ">
+          <img src="@/assets/images/home-1.png" alt="rafikey-image" class="w-full" />
         </div>
       </div>
-<!--      <div class="bg-shark-950">-->
-<!--&lt;!&ndash;        <p>Ask Rafikey</p>&ndash;&gt;-->
-<!--        <div class="bg-stone-200 rounded-full p-4 flex">-->
-<!--          <span class="material-icons-outlined text-shark-950">arrow_upward</span>-->
-<!--        </div>-->
-<!--      </div>-->
     </section>
 
     <!--    second slide-->
     <section
-      class="panel-3 z-1 bg-white  h-screen flex items-center justify-center lg:w-11/12 w-full mx-auto"
+      class="panel-3 pb-20  xl:h-screen z-1 bg-white lg:px-[80px]"
     >
       <div
-        class="space-y-10 xl:w-3/4 w-full px-8 mx-auto h-screen flex flex-col lg:justify-center justify-start pt-10"
+        class=" flex flex-col"
       >
-        <div class="flex items-center space-y-4 flex-col">
-          <p class="lg:text-2xl text-lg text-cerise-600 font-bold">ABOUT</p>
-          <h2 class="lg:text-7xl text-2xl font-bold text-shark-950">RAFIKey AI ChatBot</h2>
+        <div class="flex items-center space-y-4 flex-col  mx-auto">
+          <p class="font-pt-sans-bold text-cerise-600   lg:text-[20px] text-[16px]">Other Services</p>
+          <h2 class="font-changa-one lg:text-[72px] text-[24px] leading-[74px] tracking-[-3%] text-textColorOne text-center">RAFIKey AI ChatBot</h2>
         </div>
         <div
-          class="lg:flex space-y-4 md:space-y-10 lg:w-full md:w-3/4 mx-auto lg:space-y-0 lg:gap-6 items-stretch justify-center"
+          class="lg:flex md:w-3/4 px-8 md:px-0 mx-auto lg:w-full lg:gap-6 space-y-10   lg:space-y-0 lg:py-24 items-stretch justify-center"
         >
           <div
             class="bg-white rounded-xl lg:flex-col items-center px-8 lg:px-0 flex gap-4 lg:gap-0 shadow-2xl lg:py-10 py-4 lg:space-y-4"
@@ -198,14 +183,14 @@ onMounted(async () => {
               <img
                 src="@/assets/images/home-2.png"
                 alt="info-image"
-                class="w-16 md:w-20 h-30 lg:w-20"
+                class="w-12 md:w-16  lg:w-20"
               />
             </div>
-            <div class="lg:py-12 lg:space-y-3 lg:w-full mx-auto lg:px-4">
-              <p class="lg:text-3xl text-sm font-bold text-center">SRHR Info</p>
-              <p class="lg:text-center lg:text-xl text-sm text-gray-400">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt
+            <div class="lg:py-12 lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
+              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">SRHR Info</p>
+              <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
+                Rafikey is a digital companion designed to empower young people with the knowledge, skills, confidence, and tools they need to make informed decisions about their health, relationships, and future.
+
               </p>
             </div>
           </div>
@@ -217,14 +202,13 @@ onMounted(async () => {
               <img
                 src="@/assets/images/home-3.png"
                 alt="info-image"
-                class="w-16 md:w-20 h-30 lg:w-20"
+                class="w-12 md:w-16  lg:w-20"
               />
             </div>
-            <div class="lg:py-12 lg:space-y-3 lg:w-full mx-auto lg:px-4">
-              <p class="lg:text-3xl text-sm font-bold text-center">Nearest Service</p>
-              <p class="lg:text-center lg:text-xl text-sm text-gray-400">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt
+            <div class="lg:py-12 lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
+              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Nearest Service</p>
+              <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
+                Our Service Finder feature helps you quickly locate trusted service centers near you. Whether you’re looking for health facilities, support services, or specialized care, simply search and connect with the right provider in your area.
               </p>
             </div>
           </div>
@@ -235,14 +219,14 @@ onMounted(async () => {
               <img
                 src="@/assets/images/home-4.png"
                 alt="info-image"
-                class="w-16 md:w-20 h-30 lg:w-20"
+                class="w-12 md:w-16  lg:w-20"
               />
             </div>
-            <div class="lg:py-12 lg:space-y-3 lg:w-full mx-auto lg:px-4">
-              <p class="lg:text-3xl text-sm  font-bold text-center">Talk to Someone</p>
-              <p class="lg:text-center lg:text-xl text-sm text-gray-400">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt
+            <div class="lg:py-12 lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
+              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Talk to Someone</p>
+              <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
+                Whether you have questions, need guidance, or just want to talk, our friendly Rafikey is here to help you anytime.
+                Start a conversation now and let Rafikey guide you to the answers, resources, and services that matter to you.
               </p>
             </div>
           </div>
@@ -253,14 +237,14 @@ onMounted(async () => {
               <img
                 src="@/assets/images/home-5.png"
                 alt="info-image"
-                class="w-16 md:w-20 h-30 lg:w-20"
+                class="w-12 md:w-16  lg:w-20"
               />
             </div>
-            <div class="lg:py-12 lg:space-y-3 lg:w-full mx-auto lg:px-4">
-              <p class=" font-bold text-center">Personalized Support</p>
-              <p class="lg:text-center lg:text-xl text-sm text-gray-400">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt
+            <div class="lg:py-12 w-3/4  lg:space-y-3 lg:w-full mx-auto lg:px-4">
+              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Personalized Support</p>
+              <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
+                Create your free account to unlock tailored advice and recommendations just for you. The more Rafikey knows you, the more it will respond uniquely to your queries.
+                Because one-size-fits-all doesn’t fit you – join to get custom support.
               </p>
             </div>
           </div>
@@ -269,20 +253,22 @@ onMounted(async () => {
     </section>
 
     <!--    third slide -->
-    <section class="section h-screen flex pt-10 md:pt-0 items-center bg-darkgray">
-      <div class="h-screen w-11/12 mx-auto flex items-center justify-between">
-        <div class="h-screen w-full lg:flex hidden items-center">
-          <div class="w-6/12 flex items-end justify-center">
+    <section class="section xl:h-screen  lg:px-[80px] flex bg-darkGrayOne pb-10">
+      <div class=" flex w-full items-center justify-between pt-[89px]">
+        <div class="w-1/2 xl:pt-[48px] lg:flex hidden items-center justify-start">
+          <div class="flex items-end justify-center xl:h-[546px] xl:w-[546px] ">
             <img src="@/assets/images/home-7.png" alt="rafikey-image" class="" />
           </div>
         </div>
 
-        <div class="space-y-8">
+        <div class="space-y-8 lg:w-1/2 w-3/4 mx-auto flex flex-col ">
           <div class="flex lg:justify-start justify-center">
-            <p class="text-cerise-600 font-bold lg:text-2xl text-lg">WHY RAFIKey</p>
+            <p class="text-cerise-600 text-[16px] lg:text-[20px] font-pt-sans-bold">WHY RAFIKey</p>
           </div>
-          <div class="flex lg:justify-start justify-center">
-            <h2 class="xl:text-8xl lg:text-5xl text-center lg:text-start text-2xl text-bold text-white">
+          <div class="flex lg:justify-start justify-center xl:w-4/6">
+            <h2
+              class="text-center text-[24px]  lg:text-[72px] tracking-[3%] leading-[24px] lg:leading-[74px] lg:text-start font-changa-one text-white"
+            >
               Collaborate & learn with our platform
             </h2>
           </div>
@@ -293,18 +279,18 @@ onMounted(async () => {
           </div>
           <div>
             <p
-              class="text-stone-300 lg:text-2xl text-sm lg:w-full md:w-1/2 w-3/4 lg:text-start text-center mx-auto leading-8"
+              class="lg:w-3/4 md:w-1/2 mx-auto lg:mx-0 text-center lg:text-start font-outfit text-[15px] lg:text-[20px] tracking-[0%] text-white leading-[32px]"
             >
               Confidential chats, no judgement, and GDPR-complaint data handling. Get clear answers
               on topics like periods, STIs,consent and contraception.
             </p>
           </div>
-          <div class="flex lg:justify-start justify-center">
+          <div class="flex lg:justify-start justify-center mx-auto lg:mx-0 h-[63px] w-[200px]">
             <button
               @click="registerHandler"
-              class="btn btn-sm border-none bg-casablanca-300 lg:py-8 py-6 px-8 lg:px-16 rounded-xl"
+              class="btn btn-sm border-none h-full w-full shadow-[0_0_50px_0px] shadow-white/45  bg-casablanca-300 py-[16px]  px-[48px] rounded-xl"
             >
-              <span class="text-white font-semibold lg:text-xl text-lg">Start Chat</span>
+              <span class="text-white font-pt-sans-bold text-[24px]">Start Chat</span>
             </button>
           </div>
         </div>
@@ -313,75 +299,74 @@ onMounted(async () => {
 
     <!--    fourth slide-->
     <section
-      class="section h-screen flex flex-col bg-white justify-center items-center w-full mx-auto"
+      class="section  xl:h-screen flex items-center  lg:px-[80px]"
     >
-      <div class="space-y-20 w-11/12  h-screen  mx-auto hidden lg:flex flex-col justify-center">
+      <div class="space-y-20 hidden lg:flex flex-col py-10  ">
         <div class="flex flex-col items-center space-y-4">
           <div>
-            <p class="text-cerise-600 font-bold text-2xl">Testimonials</p>
+            <p class="text-cerise-600 font-pt-sans-bold text-[20px] leading-[32px]">Testimonials</p>
           </div>
-          <div>
-            <h2 class="xl:text-7xl text-5xl font-bold text-nowrap text-shark-950">What people think about RAFIKey</h2>
+          <div class="">
+            <h2 class="xl:text-[72px] text-[48px] font-changa-one tracking-[3%] leading-[74px] text-textColorOne text-nowrap">
+              What people think about RAFIKey
+            </h2>
           </div>
         </div>
-        <div class="flex gap-8 w-full xl:w-11/12 mx-auto">
-          <div class="border-black border-2 rounded-3xl p-10 space-y-6">
+        <div class="flex  gap-8 mx-auto  justify-center">
+          <div class="border-black border-[1px] rounded-xl px-10 py-20 space-y-6">
             <div class="flex justify-between">
               <div class="flex gap-4">
                 <img src="@/assets/images/avator-web.png" alt="testimonial-image" />
                 <div class="flex flex-col justify-center">
-                  <p class="text-nowrap text-2xl font-bold text-shark-950">Jaden Kiptoo</p>
-                  <span class="text-2xl text-gray-400">Machakos</span>
+                  <p class="text-nowrap font-pt-sans-bold text-[24px] text-textColorTwo">Jaden Kiptoo</p>
+                  <span class="text-[18px] font-pt-sans-regular opacity-[60%] text-bodyText">Machakos</span>
                 </div>
               </div>
-              <div class="w-4 xl:w-12">
+              <div class="w-[55px] h-[43px]">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
             <div>
-              <p class="text-gray-400 text-xl">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              <p class="text-[20px] font-urbanist weight-[500]  leading-[24px] tracking-[0%] text-bodyText">
+                I didn’t know where to go for help, but Rafikey guided me to a nearby health center in minutes. It felt like talking to a caring friend who knew exactly what I needed.
               </p>
             </div>
           </div>
-          <div class="border-black border-2 rounded-3xl p-8 space-y-6">
+           <div class="border-black border-[1px] rounded-xl  px-10 py-20 space-y-6">
             <div class="flex justify-between">
               <div class="flex gap-4">
                 <img src="@/assets/images/avator-web.png" alt="testimonial-image" />
                 <div class="flex flex-col justify-center">
-                  <p class="text-nowrap text-2xl font-bold text-shark-950">Jaden Kiptoo</p>
-                  <span class="text-2xl text-gray-400">Machakos</span>
+                  <p class="text-nowrap font-pt-sans-bold text-[24px] text-textColorTwo">Halima Wakesho</p>
+                  <span class="text-[18px] font-pt-sans-regular opacity-[60%] text-bodyText">Kilifi</span>
                 </div>
               </div>
-              <div class="w-4 xl:w-12">
+              <div class="w-[55px] h-[43px]">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
             <div>
-              <p class="text-gray-400 text-xl">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              <p class="text-[20px] font-urbanist weight-[500] leading-[24px] tracking-[0%] text-bodyText">
+                Rafikey was so easy to use! I just answered a few questions and instantly got directions to the right service. Rafikey saved me so much time and stress.
               </p>
             </div>
           </div>
-          <div class="border-black border-2 rounded-3xl p-8 space-y-6">
+         <div class="border-black border-[1px] rounded-xl px-10 py-20 space-y-6">
             <div class="flex justify-between">
               <div class="flex gap-4">
                 <img src="@/assets/images/avator-web.png" alt="testimonial-image" />
                 <div class="flex flex-col justify-center">
-                  <p class="text-nowrap text-2xl font-bold text-shark-950">Jaden Kiptoo</p>
-                  <span class="text-2xl text-gray-400">Machakos</span>
+                  <p class="text-nowrap font-pt-sans-bold text-[24px] text-textColorTwo">John Odhiambo</p>
+                  <span class="text-[18px] font-pt-sans-regular opacity-[60%] text-bodyText">Nanyuki</span>
                 </div>
               </div>
-              <div class="w-4 xl:w-12">
+              <div class="w-[55px] h-[43px]">
                 <img src="@/assets/images/quotes.png" />
               </div>
             </div>
             <div>
-              <p class="text-gray-400 text-xl">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              <p class="text-[20px] font-urbanist weight-[500] leading-[24px] tracking-[0%] text-bodyText">
+                I was unsure about my next step, but rafikey made everything clear. It gave me trusted information and connected me to the right place without any hassle.
               </p>
             </div>
           </div>
@@ -446,39 +431,40 @@ onMounted(async () => {
     </section>
 
     <!--    fifth slide-->
-    <section class="section lg:h-screen flex items-center bg-white w-full mx-auto">
-      <div class="space-y-10 xl:w-10/12 flex flex-col items-center  mx-auto">
-        <div class="w-full flex flex-col items-center space-y-4 lg:pt-20">
-          <p class="text-cerise-500 lg:text-2xl text-lg">Blog</p>
-          <h2 class="text-shark-950 lg:text-5xl text-2xl font-bold">Latest post</h2>
+    <section class="xl:screen section  pb-20 lg:px-[80px] px-5">
+      <div class=" flex flex-col space-y-10">
+        <div class="w-full flex flex-col items-center  lg:space-y-5 ">
+          <p class="text-cerise-500 font-pt-sans-bold text-[16px] lg:text-[20px]">Blog</p>
+          <h2 class="text-textColorOne font-changa-one text-[24px]  lg:text-[72px] leading-[74px] tracking-[3%]">Latest post</h2>
         </div>
-        <div class="flex lg:gap-12 px-8 xl:px-0  items-stretch justify-center">
-          <div class="flex w-full  ">
-            <img src="@/assets/images/home-8.png" alt="blog-post-image" />
+        <div class="xl:flex xl:flex-row items-stretch flex-col space-y-4 xl:space-y-0  w-full ">
+          <div class="flex w-full justify-center ">
+            <img src="@/assets/images/home-8.png" alt="blog-post-image" class="w-full xl:w-fit" />
           </div>
-          <div class="space-y-8 hidden w-full  lg:block ">
-            <div>
-              <p class="text-deep-cove-600">23 April 2025</p>
+          <div class="hidden lg:flex flex-col space-y-8   xl:w-1/2">
+            <div class="">
+              <p class="text-deep-cove-600 font-pt-sans-bold text-[20px] ">23 April 2025</p>
             </div>
-            <div>
-              <h2 class="xl:!text-7xl  text-5xl text-extrabold text-shark-950">
+            <div class="w-3/4">
+              <h2 class="font-changa-one text-[48px] text-textColorOne leading-[48px] tracking-[1%] ">
                 Your Body, Your Rights, Your choices
               </h2>
             </div>
-            <div class="xl:w-3/4">
-              <p class="text-xl leading-7 text-gray-400">
-                Lorem ipsum doloor sit amet, consecteur adiopiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            <div class="w-full">
+              <p class="font-pt-sans-regular text-[16px] text-bodyText leading-[24px]">
+                Halima had been feeling unwell for a few days and wasn’t sure where to go for help. She opened our website and saw the “Ask Rafikey” button. Curious, she clicked it to access Rafikey.
+                Within minutes, Rafikey was able to help with suggesting was to mitigate the problem.
+                Thanks to Rafikey, Halima was able to quickly find the right place to get the care she needed — without long searches or uncertainty.
               </p>
             </div>
             <div class="flex gap-4">
-              <button class="btn btn-sm border-none bg-casablanca-300 py-8 px-16 rounded-xl">
-                <span class="text-white font-semibold text-2xl">Read More</span>
+              <button class="btn btn-sm h-[63px] border-none bg-casablanca-300 py-[16px] px-[48px] rounded-xl">
+                <span class="text-white font-pt-sans-bold text-[24px]">Read More</span>
               </button>
               <div
-                class="flex justify-between btn btn-sm items-center p-8 border-none bg-deep-cove-600 w-1/3 rounded-xl"
+                class="flex justify-between h-[63px] btn btn-sm items-center p-8 border-none bg-deep-cove-600 w-1/3 rounded-xl"
               >
-                <span class="text-white font-semibold !text-2xl text-nowrap">All Posts</span>
+                <span class="text-white font-pt-sans-bold text-[24px] text-nowrap">All Posts</span>
                 <span class="material-icons-outlined font-extrabold text-white !text-2xl"
                   >arrow_forward</span
                 >
