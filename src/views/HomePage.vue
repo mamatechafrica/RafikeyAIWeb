@@ -62,6 +62,10 @@ const nextEl = ref(null)
 const navigationOptions = ref({ prevEl: null, nextEl: null })
 
 onMounted(async () => {
+  navigationOptions.value = {
+    prevEl: prevEl.value,
+    nextEl: nextEl.value,
+  }
   await nextTick()
 
 
