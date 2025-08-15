@@ -55,6 +55,12 @@ const carouselInfo = [
 const registerHandler = () => {
   window.location.href = 'https://rafikeyaichatbot-frontend.onrender.com/auth'
 }
+
+
+const prevEl = ref(null)
+const nextEl = ref(null)
+const navigationOptions = ref({ prevEl: null, nextEl: null })
+
 onMounted(async () => {
   await nextTick()
 
