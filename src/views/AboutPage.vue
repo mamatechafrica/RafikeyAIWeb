@@ -9,15 +9,14 @@ const startChatHandler = () => {
 <template>
   <div class="overflow-hidden">
     <section class=" w-full lg:space-y-8  flex items-center  flex-col justify-center">
-        <div class="flex justify-center md:pt-24  lg:pt-24 xl:pt-0 pt-20">
+        <div class="flex justify-center md:pt-24  lg:pt-28 pt-20">
           <h2 class="font-changa-one  text-lightGrayFour text-[24px]  lg:text-[48px] leading-[74px] tracking-[-3%]">About Rafikey</h2>
         </div>
         <div class="xl:w-1/3 w-2/3 mx-auto">
           <p class="text-[14px] lg:text-[20px] leading-[120%]  text-center font-urbanist font-bold text-black  tracking-wide">
-            We know life can feel overwhelming sometimes - whether it's stress, emotions,
-            relationships, school pressure, or just needing someone to talk to. That's why Rafikey
+           Rafikey
             exists, to support young people like you with tools, guidance, and a private space to
-            express yourself.
+            express yourself and get help.
           </p>
         </div>
         <div class="lg:flex w-full lg:justify-center">
