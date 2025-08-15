@@ -76,6 +76,7 @@ export default {
           '950': '#2d313e',
         },
 
+
         'coral-red': {
           '50': '#fff1f1',
           '100': '#ffdfdf',
@@ -130,22 +131,39 @@ export default {
           '950': '#1c1f28',
         },
 
-
+        bodyText: '#8A89A0',
         darkgray: '#222222',
+        darkGrayOne: '#0C0011',
         lightgray: '#252525',
-        lightBackground: '#F6F6F6'
-
+        lightGrayOne:'#DADADA',
+        lightGrayTwo: '#8887AE',
+        lightGrayThree: '#212121',
+        lightGrayFour: '#171543',
+        lightBackground: '#F6F6F6',
+        navBarShadowBackground: '#2E2BA666'
       },
+
       fontFamily: {
-        'sf-pro': ['SF Pro Regular', 'Ubuntu', 'sans-serif'],
-        'sf-pro-medium': ['SF Pro Medium', 'Ubuntu', 'sans-serif'],
-        'sf-pro-bold': ['SF Pro Bold', 'Ubuntu', 'sans-serif'],
-        'sf-pro-italic': ['SF Pro Italic', 'Ubuntu', 'sans-serif'],
-        'sf-pro-thin-italic': ['SF Pro Thin Italic', 'Ubuntu', 'sans-serif'],
-        'sf-pro-light-italic': ['SF Pro Light Italic', 'Ubuntu', 'sans-serif'],
-        'sf-pro-ultralight': ['SF Pro Ultralight', 'Ubuntu', 'sans-serif'],
-        'sf-pro-semibold-italic': ['SF Pro Semibold Italic', 'Ubuntu', 'sans-serif'],
-        'sf-pro-heavy-italic': ['SF Pro Heavy Italic', 'Ubuntu', 'sans-serif'],
+        'changa-one-italic': ['Changa One Italic', 'Ubuntu', 'sans-serif'],
+        'changa-one': ['changa One Regular', 'Ubuntu', 'sans-serif'],
+        'outfit': ['Outfit Regular', 'Ubuntu', 'sans-serif'],
+        'outfit-bold': ['Outfit Bold', 'Ubuntu', 'sans-serif'],
+        'outfit-extra-bold': ['Outfit Extra Bold', 'Ubuntu', 'sans-serif'],
+        'outfit-extra-light': ['Outfit Extra Light', 'Ubuntu', 'sans-serif'],
+        'outfit-light': ['Outfit Light', 'Ubuntu', 'sans-serif'],
+        'outfit-medium': ['Outfit Medium', 'Ubuntu', 'sans-serif'],
+        'outfit-semibold': ['Outfit Semibold', 'Ubuntu', 'sans-serif'],
+        'outfit-heavy': ['Outfit Black', 'Ubuntu', 'sans-serif'],
+        'pt-sans-bold': ['PT SANS Bold', 'Ubuntu', 'sans-serif'],
+        'pt-sans-bold-italic': ['PT SANS Bold Italic', 'Ubuntu', 'sans-serif'],
+        'pt-sans-caption-bold': ['PT SANS Caption Bold', 'Ubuntu', 'sans-serif'],
+        'pt-sans-caption-regular': ['PT SANS Caption Regular', 'Ubuntu', 'sans-serif'],
+        'pt-sana-italic': ['PT SANS Italic', 'Ubuntu', 'sans-serif'],
+        'pt-sans-narrow-bold': ['PT SANS Narrow Bold', 'Ubuntu', 'sans-serif'],
+        'pt-sans-narrow-regular': ['PT SANS Narrow Regular', 'Ubuntu', 'sans-serif'],
+        'pt-sans-regular': ['PT SANS Regular', 'Ubuntu', 'sans-serif'],
+        'urbanist': ['Urbanist', 'Ubuntu', 'sans-serif'],
+        'urbanist-italic': ['Urbanist Bold', 'Ubuntu', 'sans-serif'],
       }
     },
   },
