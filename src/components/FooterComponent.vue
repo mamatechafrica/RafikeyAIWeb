@@ -13,6 +13,14 @@ onMounted(async ()=>{
   await nextTick()
 
 })
+
+const  termsofuseHandler = () => {
+  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/terms-of-service', '_blank')
+}
+
+const privacyPolicyHandler = () => {
+  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/privacy-policy-1', '_blank')
+}
 </script>
 
 <template>
