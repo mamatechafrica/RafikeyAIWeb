@@ -21,7 +21,7 @@ const  termsofuseHandler = () => {
 }
 
 const privacyPolicyHandler = () => {
-  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/privacy-policy-1', '_blank')
+  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/privacy-policy-2', '_blank')
 }
 </script>
 
@@ -36,67 +36,42 @@ const privacyPolicyHandler = () => {
       </div>
     </section>
 
-    <section class="panel flex flex-col pb-24 bg-white py-10 items-center justify-center">
-      <div class="grid grid-cols-4 gap-20 max-w-7xl w-full mx-auto">
-        <div class="space-y-6 flex flex-col items-center lg:col-span-2 col-span-4  ">
-          <h2 class="text-[32px] font-changa leading-[100%] tracking-[-3%]">RAFIKey</h2>
-          <div class="border-b border-2 w-48 border-gradient-to-r from-coral-red-500 to-azure-radiance-600"></div>
-          <div class="md:w-3/6 w-3/4 ">
-            <p class="font-outfit text-center text-lightGrayThree text-[16px] tracking-[-3%]">
-              Your Safe Space for Sexual and Reproductive Health and Rights Information and services
-            </p>
-          </div>
+    <footer class="px-6 py-8 bg-white">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-16">
+
+        <!-- Left brand block -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left md:flex-1">
+          <h2 class="text-[32px] font-changa leading-[100%] tracking-[-3%]">Rafikey</h2>
+          <div class="border-b border-2 w-48 border-gradient-to-r from-coral-red-500 to-azure-radiance-600 mt-2"></div>
+          <p class="mt-4 font-outfit text-lightGrayThree text-[16px] tracking-[-3%] md:max-w-sm">
+            Your Safe Space for Sexual and Reproductive Health and Rights Information and services
+          </p>
         </div>
 
-        <div class="lg:space-y-32 space-y-20 lg:col-span-1 col-span-2  flex flex-col items-center">
-          <div class="flex flex-col text-sm lg:text-lg">
-            <div class="text-nowrap">
-              <p class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Rafikey</p>
-              <ul class="cursor-pointer  space-y-1 text-[15px] font-outfit text-black leading-[173%] tracking-[0%] ">
-                <li @click="router.push('/about')" >About</li>
-                <li @click="router.push('/chatbot')">ChatBot</li>
-<!--                <li>FAQS</li>-->
-              </ul>
-            </div>
-          </div>
-          <div class="flex flex-col col-span-1 text-nowrap text-sm lg:text-lg ">
-            <div>
-              <p class=" font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Contact</p>
-              <ul class="space-y-1 cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] ">
-                <li><a href="mailto:rafikey@afrimedia.org">Tech Support</a></li>
-                <li><a href="mailto:rafikey@afrimedia.org">Data Privacy</a></li>
-                <li><a href="mailto:rafikey@afrimedia.org">General</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="space-y-32 text-nowrap text-sm lg:text-lg ">
-          <div class="flex flex-col ">
-            <div>
-              <p class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Our Research</p>
-              <ul class="cursor-pointer space-y-1 text-[15px] font-outfit text-black leading-[173%] tracking-[0%] ">
-                <li>Process</li>
-                <li>Timeline</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex flex-col text-nowrap text-sm lg:text-lg ">
-            <div>
-              <p class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Privacy and Safety</p>
-              <ul class="cursor-pointer space-y-1 text-[15px] font-outfit text-black leading-[173%] tracking-[0%] ">
-                <li @click="termsofuseHandler">Terms of Use</li>
-                <li @click="privacyPolicyHandler">Privacy Policy</li>
-              </ul>
-            </div>
+        <!-- Links grouped in a row on desktop, stacked on mobile -->
+        <div class="flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start md:flex-1 md:justify-end">
 
+          <div class="flex flex-col gap-2 text-center md:text-left">
+            <h3 class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Rafikey</h3>
+            <a href="#" @click="router.push('/about')" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">About</a>
+            <a href="#" @click="router.push('/chatbot')" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">ChatBot</a>
           </div>
+
+          <div class="flex flex-col gap-2 text-center md:text-left">
+            <h3 class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Privacy and Safety</h3>
+            <a href="#" @click="termsofuseHandler" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">Terms of Use</a>
+            <a href="#" @click="privacyPolicyHandler" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">Privacy Policy</a>
+          </div>
+
+          <div class="flex flex-col gap-2 text-center md:text-left">
+            <h3 class="font-outfit text-[15px] leading-[173%] tracking-[0%] text-black opacity-[48%]">Contact</h3>
+            <a href="mailto:rafikey@afrimedia.org" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">Data Privacy</a>
+            <a href="mailto:rafikey@afrimedia.org" class="cursor-pointer text-[15px] font-outfit text-black leading-[173%] tracking-[0%] hover:opacity-70">General</a>
+          </div>
+
         </div>
       </div>
-<!--      <div class="flex absolute bottom-0 justify-center items-center text-[8px] font-changa-one tracking-[-3%]  leading-[100%]">-->
-<!--          <span class="">&copy;</span>-->
-<!--        <span>RAfiKey | All Rights Reserved</span>-->
-<!--      </div>-->
-    </section>
+    </footer>
   </div>
 </template>
 

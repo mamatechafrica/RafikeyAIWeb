@@ -1,17 +1,42 @@
 <script setup lang="ts">
 
 import NavBar from '@/components/NavBar.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
+const showButton = ref(true)
 
 const askRafikeyHandler = () => {
   window.location.href = 'https://rafikeyaichatbot-frontend.onrender.com/auth'
 }
+
+const handleScroll = () => {
+  const footer = document.querySelector('footer')
+  if (footer) {
+    const footerRect = footer.getBoundingClientRect()
+    const windowHeight = window.innerHeight
+
+    // Hide button when footer is visible (when top of footer is within viewport)
+    showButton.value = footerRect.top > windowHeight
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  handleScroll() // Check initial state
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
   <div class="h-screen  relative ">
     <NavBar />
-    <div class="fixed bottom-0  left-0 right-0   z-50 flex justify-center items-center space-x-4 p-4 ">
+    <div
+      v-show="showButton"
+      class="fixed bottom-0  left-0 right-0   z-50 flex justify-center items-center space-x-4 p-4 transition-opacity duration-300"
+    >
       <div class="w-[298px]  h-[69px] bg-darkgray rounded-full">
         <div class="h-full flex w-full justify-between items-center px-[26px] cursor-pointer" @click="askRafikeyHandler" >
           <div>

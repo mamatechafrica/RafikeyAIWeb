@@ -171,7 +171,7 @@ onMounted(async () => {
       >
         <div class="flex items-center space-y-4 flex-col  mx-auto">
           <p class="font-pt-sans-bold text-cerise-600   lg:text-[20px] text-[16px]">Other Services</p>
-          <h2 class="font-changa-one lg:text-[72px] text-[24px] leading-[74px] tracking-[-3%] text-textColorOne text-center">RAFIKey AI ChatBot</h2>
+          <h2 class="font-changa-one lg:text-[72px] text-[24px] leading-[74px] tracking-[-3%] text-textColorOne text-center">Rafikey AI ChatBot</h2>
         </div>
         <div
           class="lg:flex md:w-3/4 px-8 md:px-0 mx-auto lg:w-full lg:gap-6 space-y-10   lg:space-y-0 lg:py-24 items-stretch justify-center"
@@ -263,7 +263,7 @@ onMounted(async () => {
 
         <div class="space-y-8 lg:w-1/2 w-3/4 mx-auto flex flex-col ">
           <div class="flex lg:justify-start justify-center">
-            <p class="text-cerise-600 text-[16px] lg:text-[20px] font-pt-sans-bold">WHY RAFIKey</p>
+            <p class="text-cerise-600 text-[16px] lg:text-[20px] font-pt-sans-bold">Why Rafikey</p>
           </div>
           <div class="flex lg:justify-start justify-center xl:w-4/6">
             <h2
@@ -308,7 +308,7 @@ onMounted(async () => {
           </div>
           <div class="">
             <h2 class="xl:text-[72px] text-[48px] font-changa-one tracking-[3%] leading-[74px] text-textColorOne text-nowrap">
-              What people think about RAFIKey
+              What people think about Rafikey
             </h2>
           </div>
         </div>
@@ -428,9 +428,10 @@ onMounted(async () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </section>
+        </section>
 
     <!--    fifth slide-->
+    <!--
     <section class="xl:screen section  pb-20 lg:px-[80px] px-5">
       <div class=" flex flex-col space-y-10">
         <div class="w-full flex flex-col items-center  lg:space-y-5 ">
@@ -452,7 +453,7 @@ onMounted(async () => {
             </div>
             <div class="w-full">
               <p class="font-pt-sans-regular text-[16px] text-bodyText leading-[24px]">
-                Halima had been feeling unwell for a few days and wasn’t sure where to go for help. She opened our website and saw the “Ask Rafikey” button. Curious, she clicked it to access Rafikey.
+                Halima had been feeling unwell for a few days and wasn't sure where to go for help. She opened our website and saw the "Ask Rafikey" button. Curious, she clicked it to access Rafikey.
                 Within minutes, Rafikey was able to help with suggesting was to mitigate the problem.
                 Thanks to Rafikey, Halima was able to quickly find the right place to get the care she needed — without long searches or uncertainty.
               </p>
@@ -474,6 +475,7 @@ onMounted(async () => {
         </div>
       </div>
     </section>
+    -->
     <FooterComponent />
   </div>
 </template>

@@ -35,7 +35,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
     <section class="xl:h-screen  flex  lg:space-y-6 space-y-10  flex-col items-center justify-center ">
       <div class="lg:flex lg:space-y-0 space-y-16 gap-6 xl:w-9/12 w-11/12  mx-auto">
         <div class="flex flex-1  flex-col border-shark-950 border-2 lg:px-8 lg:py-12  rounded-2xl py-10 px-4 ">
-          <p class="font-changa-one text-[24px] lg:text-[36px] leading-[32px]  lg:leading-[74px] tracking-[-3%] text-lightGrayFour">💬  Who can use Rafkey?</p>
+          <p class="font-changa-one text-[24px] lg:text-[36px] leading-[32px]  lg:leading-[74px] tracking-[-3%] text-lightGrayFour">💬  Who can use Rafikey?</p>
           <div class="lg:pt-10 pt-4 text-[18px] font-urbanist weight-[600] text-lightGrayFour">
 <!--            <p class="">Anyone can use Rafikey if:</p>-->
             <ul class="list-disc ps-8">
