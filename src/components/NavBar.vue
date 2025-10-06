@@ -28,11 +28,11 @@ const homeHandler = () =>{
   })
 }
 const loginHandler = () => {
-  window.location.href = 'https://rafikeyaichatbot-frontend.onrender.com/auth/login'
+  window.location.href = 'https://chat.askrafikey.com/auth/login'
 }
 
 const registerHandler = () => {
-  window.location.href = 'https://rafikeyaichatbot-frontend.onrender.com/auth'
+  window.location.href = 'https://chat.askrafikey.com/auth'
 }
 </script>
 

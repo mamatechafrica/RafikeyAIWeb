@@ -2,7 +2,7 @@
 import FooterComponent from '@/components/FooterComponent.vue'
 
 const startChatHandler = () => {
-  window.location.href = 'https://rafikeyaichatbot-frontend.onrender.com/auth'
+  window.location.href = 'https://chat.askrafikey.com/auth'
 }
 </script>
 
@@ -14,9 +14,10 @@ const startChatHandler = () => {
         </div>
         <div class="xl:w-1/3 w-2/3 mx-auto">
           <p class="text-[14px] lg:text-[20px] leading-[120%]  text-center font-urbanist font-bold text-black  tracking-wide">
-           Rafikey
-            exists, to support young people like you with tools, guidance, and a private space to
-            express yourself and get help.
+            Rafikey is a digital companion designed to empower young people with the knowledge, skills, confidence,
+            and tools they need to make informed decisions about their health, relationships, and future.
+            The platform offers chat, games, and a service referral feature. We believe that every young person deserves access to accurate,
+            age-appropriate information delivered in a way that’s relatable, respectful, and rooted in real-life experiences.
           </p>
         </div>
         <div class="lg:flex w-full lg:justify-center">

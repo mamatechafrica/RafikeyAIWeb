@@ -17,11 +17,11 @@ onMounted(async ()=>{
 })
 
 const  termsofuseHandler = () => {
-  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/terms-of-service', '_blank')
+  window.open('https://chat.askrafikey.com/auth/register/terms-of-service', '_blank')
 }
 
 const privacyPolicyHandler = () => {
-  window.open('https://rafikeyaichatbot-frontend.onrender.com/auth/register/privacy-policy-2', '_blank')
+  window.open('https://chat.askrafikey.com/auth/register/privacy-policy-2', '_blank')
 }
 </script>
 
