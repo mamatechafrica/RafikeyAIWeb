@@ -122,9 +122,9 @@ onMounted(async () => {
           </p>
         </div>
 
-        <div class="flex lg:hidden justify-center">
-          <div class="w-3/5">
-            <img src="@/assets/images/home-1.png" alt="rafikey-image" />
+        <div class="flex w-full items-center lg:hidden justify-center ">
+          <div class="">
+            <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" />
           </div>
         </div>
 
@@ -155,7 +155,7 @@ onMounted(async () => {
       </div>
       <div class="panel-2 hidden xl:h-screen pt-[45px] w-[681px] h-[711px] lg:flex justify-center  items-center ">
         <div class="xl:w-[568px] xl:h-[568px] w-[380px] h-[380px] ">
-          <img src="@/assets/images/home-1.png" alt="rafikey-image" class="w-full" />
+          <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="w-full " />
         </div>
       </div>
     </section>
@@ -255,7 +255,7 @@ onMounted(async () => {
       <div class=" flex w-full items-center justify-between pt-[89px]">
         <div class="w-1/2 xl:pt-[48px] lg:flex hidden items-center justify-start">
           <div class="flex items-end justify-center xl:h-[546px] xl:w-[546px] ">
-            <img src="@/assets/images/home-7.png" alt="rafikey-image" class="" />
+            <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="" />
           </div>
         </div>
 
@@ -272,7 +272,7 @@ onMounted(async () => {
           </div>
           <div class="flex lg:hidden pt-10 justify-center">
             <div class="w-2/5">
-              <img src="@/assets/images/home-1.png" alt="rafikey-image" />
+              <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" />
             </div>
           </div>
           <div>
