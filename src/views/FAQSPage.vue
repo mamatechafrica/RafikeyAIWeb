@@ -1,94 +1,17 @@
 <script setup lang="ts">
-import { nextTick, onMounted , ref} from 'vue'
-import { gsap } from "gsap";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-// const sectionTwo = ref<HTMLDivElement |null>(null)
-import 'swiper/css';
-import 'swiper/css/navigation';
-gsap.registerPlugin(ScrollTrigger)
-
-
-onMounted(async()=> {
-  await nextTick()
-  // const tl = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: sectionTwo.value,
-  //     start: "20% 80%",
-  //     end: "top 100",
-  //     scrub: 3,
-  //     markers: true,
-  //     toggleActions: "restart pause resume pause"
-  //   },
-  // })
-  //
-  // tl.to(sectionTwo.value, {
-  //   x: 1000,
-  //   rotation: 360,
-  //   duration: 3,
-  // })
-  //
-  // tl.to(sectionTwo.value, {
-  //   backgroundColor: "red",
-  //   duration: 1
-  // })
-  // tl.to(sectionTwo.value, {
-  //   x: 0,
-  //   rotation: 0,
-  //   duration: 3
-  // })
-  //
-  // gsap.to(sectionTwo.value, {
-  //   scrollTrigger: {
-  //     trigger: sectionTwo.value,
-  //     start: "20% 80%",
-  //     // end: "80% 40%",
-  //     scrub: 3,
-  //     markers: true,
-  //     toggleActions: "restart pause resume pause"
-  //   },
-  //   x: "50%",
-  //   rotation: 360,
-  //   duration: 5
-  // })
-
-  // gsap.utils.toArray(".panel").forEach((panel, i: number) =>{
-  //   ScrollTrigger.create({
-  //     trigger: panel as HTMLDivElement,
-  //     start: "top top",
-  //     pin: true,
-  //     pinSpacing: false
-  //   })
-  // })
-
-  // ScrollTrigger.create({
-  //   trigger:  sectionTwo.value,
-  //   start: "top top",
-  //   end: "+=300px",
-  //   pin: true,
-  //   // pinSpacing: false
-  //
-  // })
-})
-
-
-
-
+// TODO: Implement FAQ functionality - currently under construction
 </script>
 
 <template>
   <div class="h-screen">
     <div class="h-full flex justify-center items-center w-2/3 lg:w-1/3 mx-auto" >
-      <img src="@/assets/images/under-const.png" alt="uder-construction-image"/>
+      <img src="@/assets/images/under-const.png" alt="under-construction-image"/>
     </div>
-
   </div>
-
 </template>
 
 <style scoped>
+/* TODO: Remove unused styles when FAQ is implemented */
 .hide-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -96,8 +19,5 @@ onMounted(async()=> {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-.mySwiper {
-  padding-top: 200px;
 }
 </style>
