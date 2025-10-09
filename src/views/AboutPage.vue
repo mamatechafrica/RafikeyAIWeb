@@ -22,10 +22,10 @@ const startChatHandler = () => {
         </div>
         <div class="lg:flex w-full lg:justify-center">
           <div class="flex justify-center">
-            <img src="@/assets/images/computer.png" alt="computer-image"/>
+            <img src="@/assets/images/macbook-mockup.png" alt="computer-image"/>
           </div>
           <div class="flex justify-center">
-            <img src="@/assets/images/phone.png" alt="phone-image" class="w-40"/>
+            <img src="@/assets/images/iphone-mockup.png" alt="phone-image" class="w-40"/>
           </div>
         </div>
     </section>
