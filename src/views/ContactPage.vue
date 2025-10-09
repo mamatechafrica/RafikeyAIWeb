@@ -43,7 +43,8 @@ import FooterComponent from '@/components/FooterComponent.vue'
         </div>
       </div>
     </section>
-    <section>
+
+    <section class="pt-16 md:pt-20 lg:pt-24">
       <FooterComponent />
     </section>
   </div>

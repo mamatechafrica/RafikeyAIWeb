@@ -34,12 +34,12 @@ const privacyPolicyHandler = () => {
     <section class="panel xl:h-screen w-full flex justify-center md:items-center mx-auto">
       <div class="relative w-full max-w-4xl md:max-w-6xl lg:max-w-7xl h-[600px] overflow-hidden rounded-lg">
         <div class="absolute inset-0 bg-gradient-to-br from-cerise-500 via-purple-600 to-blue-600 rounded-lg"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-8">
-          <h1 class="text-4xl lg:text-7xl font-black mb-4 leading-tight font-changa-one tracking-wide">Got questions?<br/>Need answers?</h1>
-          <p class="text-lg lg:text-xl mb-8 font-outfit font-normal">Rafikey is here for you — safe, private, and judgment-free.</p>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-6 md:p-8">
+          <h1 class="text-3xl md:text-4xl lg:text-7xl font-black mb-4 leading-tight font-changa-one tracking-wide max-w-4xl mx-auto">Got questions?<br/>Need answers?</h1>
+          <p class="text-base md:text-lg lg:text-xl mb-8 font-outfit font-normal max-w-2xl mx-auto">Rafikey is here for you — safe, private, and judgment-free.</p>
           <button
             @click="startChatHandler"
-            class="bg-cerise-500 hover:bg-cerise-600 text-white font-bold py-4 px-10 rounded-lg text-xl transition duration-300 cursor-pointer font-outfit"
+            class="bg-cerise-500 hover:bg-cerise-600 text-white font-bold py-4 px-10 rounded-lg text-lg md:text-xl transition duration-300 cursor-pointer font-outfit"
           >
             Start Chat
           </button>

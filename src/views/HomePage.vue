@@ -107,8 +107,8 @@ onMounted(async () => {
 </script>
 <template>
   <div class="panel overflow-hidden">
-    <section class="xl:h-screen lg:px-[80px]  overflow-hidden flex  lg:justify-between justify-center  w-full">
-      <div class="panel-1 lg:pt-[166px]  py-20  space-y-16 sm:space-y-10 lg:space-y-0">
+    <section class="xl:h-screen lg:px-[80px] overflow-hidden flex lg:justify-between justify-center w-full">
+      <div class="panel-1 lg:pt-[166px] py-16 md:py-20 lg:py-0 space-y-12 md:space-y-16 lg:space-y-0">
         <div class="lg:w-[519px] w-[241px] mx-auto  font-changa-one ">
           <p
             class="text-deep-cove-950 text-center lg:text-start lg:leading-[74px] leading-[32px] tracking-[3%] lg:!text-[79px] !text-[24px]"
@@ -162,17 +162,17 @@ onMounted(async () => {
 
     <!--    second slide-->
     <section
-      class="panel-3 pb-20  xl:h-screen z-1 bg-white lg:px-[80px]"
+      class="panel-3 py-16 md:py-20 lg:pb-20 xl:h-screen z-1 bg-white lg:px-[80px]"
     >
       <div
         class=" flex flex-col"
       >
-        <div class="flex items-center space-y-4 flex-col  mx-auto">
-          <p class="font-pt-sans-bold text-cerise-600   lg:text-[20px] text-[16px]">Other Services</p>
+        <div class="flex items-center space-y-4 flex-col mx-auto pb-8 md:pb-12 lg:pb-0">
+          <p class="font-pt-sans-bold text-cerise-600 lg:text-[20px] text-[16px]">Other Services</p>
           <h2 class="font-changa-one lg:text-[72px] text-[24px] leading-[74px] tracking-[-3%] text-textColorOne text-center">Rafikey AI ChatBot</h2>
         </div>
         <div
-          class="lg:flex md:w-3/4 px-8 md:px-0 mx-auto lg:w-full lg:gap-6 space-y-10   lg:space-y-0 lg:py-24 items-stretch justify-center"
+          class="lg:flex md:w-3/4 px-6 md:px-0 mx-auto lg:w-full lg:gap-6 space-y-8 lg:space-y-0 lg:py-24 items-stretch justify-center"
         >
           <div
             class="bg-white rounded-xl lg:flex-col items-center px-8 lg:px-0 flex gap-4 lg:gap-0 shadow-2xl lg:py-10 py-4 lg:space-y-4"
@@ -251,15 +251,15 @@ onMounted(async () => {
     </section>
 
     <!--    third slide -->
-    <section class="section xl:h-screen  lg:px-[80px] flex bg-darkGrayOne pb-10">
-      <div class=" flex w-full items-center justify-between pt-[89px]">
+    <section class="section xl:h-screen lg:px-[80px] flex bg-darkGrayOne py-16 md:py-20 lg:pb-10">
+      <div class=" flex w-full items-center justify-between lg:pt-[89px] pt-0">
         <div class="w-1/2 xl:pt-[48px] lg:flex hidden items-center justify-start">
           <div class="flex items-end justify-center xl:h-[546px] xl:w-[546px] ">
             <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="" />
           </div>
         </div>
 
-        <div class="space-y-8 lg:w-1/2 w-3/4 mx-auto flex flex-col ">
+        <div class="space-y-6 md:space-y-8 lg:w-1/2 w-3/4 mx-auto flex flex-col">
           <div class="flex lg:justify-start justify-center">
             <p class="text-cerise-600 text-[16px] lg:text-[20px] font-pt-sans-bold">Why Rafikey</p>
           </div>
@@ -270,7 +270,7 @@ onMounted(async () => {
               Collaborate & learn with our platform
             </h2>
           </div>
-          <div class="flex lg:hidden pt-10 justify-center">
+          <div class="flex lg:hidden pt-6 md:pt-8 lg:pt-10 justify-center">
             <div class="w-2/5">
               <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" />
             </div>
@@ -473,8 +473,10 @@ onMounted(async () => {
         </div>
       </div>
     </section>
-    -->
-    <FooterComponent />
+
+    <section class="pt-16 md:pt-20 lg:pt-24">
+      <FooterComponent />
+    </section>
   </div>
 </template>
 

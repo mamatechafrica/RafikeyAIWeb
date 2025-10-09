@@ -50,7 +50,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
         </div>
       </div>
     </section>
-    <section class="xl:h-screen flex mx-auto w-11/12  pt-10 lg:pt-0  space-y-8 flex-col items-center justify-center ">
+    <section class="xl:h-screen flex mx-auto w-11/12 pt-6 md:pt-8 lg:pt-0 space-y-8 flex-col items-center justify-center">
       <div class="flex flex-col space-y-6  items-center justify-center">
         <div>
           <h2 class="text- lightGrayFour  text-[24px] lg:text-[36px] tracking-[-3%]  leading-[32px] lg:leading-[74px] font-changa-one">Watch Rafikey at Work </h2>
@@ -61,24 +61,25 @@ import FooterComponent from '@/components/FooterComponent.vue'
       </div>
 <!--      video-->
 
-      <div class="lg:hidden flex  w-3/4 h-3/4 p-6 bg-darkgray justify-center rounded-2xl items-center">
-        <video class=" w-3/4 autoplay">
-          <source src="../assets/video/rafikey-walkthrough.webm" type="video/webm">
+      <div class="lg:hidden flex w-11/12 p-3 pb-8 bg-darkgray justify-center rounded-2xl items-center">
+        <video class="w-full rounded-lg" controls preload="metadata" playsinline>
+          <source src="@/assets/video/rafikey-walkthrough.webm" type="video/webm">
           <source src="@/assets/video/rafikey-walkthrough.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-      <div  class="hidden lg:flex w-3/4 h-3/4 p-6 bg-darkgray justify-center rounded-2xl items-center">
-        <video class=" w-3/4 autoplay">
-          <source src="../assets/video/rafikey-walkthrough.webm" type="video/webm">
+      <div class="hidden lg:flex w-3/4 h-3/4 p-6 bg-darkgray justify-center rounded-2xl items-center">
+        <video class="w-full rounded-lg" controls preload="metadata" playsinline>
+          <source src="@/assets/video/rafikey-walkthrough.webm" type="video/webm">
           <source src="@/assets/video/rafikey-walkthrough.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
   </section>
-     <section class="">
-       <FooterComponent />
-     </section>
+
+  <section class="pt-16 md:pt-20 lg:pt-12">
+    <FooterComponent />
+  </section>
 
   </div>
 

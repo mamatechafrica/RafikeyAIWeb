@@ -153,8 +153,8 @@ const startChatHandler = () => {
         </div>
       </div>
     </section>
-<!--fifth slide-->
-    <section>
+
+    <section class="pt-16 md:pt-20 lg:pt-24">
       <FooterComponent />
     </section>
   </div>
