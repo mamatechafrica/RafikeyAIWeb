@@ -4,9 +4,11 @@ import NavBar from '@/components/NavBar.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const showButton = ref(true)
+const openChatFrame = ref(false)
+const chatbot_url = import.meta.env.VITE_APP_RAFIKEY_CHATBOT_FRONTEND as string
 
 const askRafikeyHandler = () => {
-  window.location.href = 'https://chat.askrafikey.com/auth'
+  openChatFrame.value =  !openChatFrame.value
 }
 
 const handleScroll = () => {
@@ -28,12 +30,19 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+// https://chat.askrafikey.com
+
+const closeChatFrame = ()=>{
+  openChatFrame.value = false
+}
+
 </script>
 
 <template>
-  <div class="h-screen  relative ">
+  <div class="min-h-screen  relative ">
     <NavBar />
     <div
+
       v-show="showButton"
       class="fixed bottom-0  left-0 right-0   z-50 flex justify-center items-center space-x-4 p-4 transition-opacity duration-300"
     >
@@ -58,6 +67,17 @@ onUnmounted(() => {
 
     </RouterView>
 
+    <div  v-if="openChatFrame" class="fixed top-24 right-0" >
+    <div class="bg-gray-200 rounded-xl p-4">
+      <div class="flex justify-end p-1 cursor-pointer" @click="closeChatFrame">
+        <span class="material-icons-outlined">cancel</span>
+      </div>
+      <iframe :src="`${chatbot_url}/guest-user`" class="h-[600px] "></iframe>
+
+    </div>
+
+
+    </div>
   </div>
 </template>
 
