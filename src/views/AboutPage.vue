@@ -142,15 +142,15 @@ const startChatHandler = () => {
           <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image"/>
         </div>
         <div>
-          <h2 class="font-changa-one text-center px-2 text-[20px] lg:text-[72px] leading-[74px] tracking-[-3%]">No labels. No pressure. Just support.</h2>
+          <h2 class="font-changa-one text-center px-2 pb-6text-[20px] lg:text-[72px] leading-[74px] tracking-[-3%]">No labels. No pressure. Just support.</h2>
         </div>
-        <div class="pt-6 cursor-pointer" >
+        <!-- <div class="pt-6 cursor-pointer" >
           <button
             @click="startChatHandler"
             class="btn btn-sm btn-primary   font-pt-sans-regular border-none py-8 px-10 bg-casablanca-300 rounded-lg flex items-center space-x-2">
             <span class="text-xl">Start Chat</span>
           </button>
-        </div>
+        </div> -->
       </div>
     </section>
 
