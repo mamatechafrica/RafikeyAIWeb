@@ -12,6 +12,10 @@ const collapseSidebarSmall = ref(true);
     collapseSidebarSmall.value = val
   }
 
+  const setOpenChatFrame = (val: boolean) =>{
+    openChatFrame.value = val
+  }
+
   return {
     collapseSidebarSmall,
     setCollapseSidebarSmall
