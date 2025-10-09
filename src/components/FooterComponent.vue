@@ -12,6 +12,10 @@ gsap.defaults({
   ease: 'none'
 })
 
+const startChatHandler = () => {
+  window.location.href = 'https://chat.askrafikey.com/auth'
+}
+
 onMounted(async ()=>{
   await nextTick()
 })
@@ -28,11 +32,18 @@ const privacyPolicyHandler = () => {
 <template>
   <div class="lg:px-[80px] px-5 space-y-10 ">
     <section class="panel xl:h-screen w-full flex justify-center md:items-center mx-auto">
-      <div class="hidden md:block pt-20">
-        <img src="@/assets/images/footer.png" alt="footer-image" class="w-full" />
-      </div>
-      <div class="md:hidden w-full flex justify-center items-center pt-10">
-        <img src="@/assets/images/footer-small.png" alt="footer-small-image" class="" />
+      <div class="relative w-full max-w-4xl md:max-w-6xl lg:max-w-7xl h-[600px] overflow-hidden rounded-lg">
+        <div class="absolute inset-0 bg-gradient-to-br from-cerise-500 via-purple-600 to-blue-600 rounded-lg"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-8">
+          <h1 class="text-4xl lg:text-7xl font-black mb-4 leading-tight font-changa-one tracking-wide">Got questions?<br/>Need answers?</h1>
+          <p class="text-lg lg:text-xl mb-8 font-outfit font-normal">Rafikey is here for you — safe, private, and judgment-free.</p>
+          <button
+            @click="startChatHandler"
+            class="bg-cerise-500 hover:bg-cerise-600 text-white font-bold py-4 px-10 rounded-lg text-xl transition duration-300 cursor-pointer font-outfit"
+          >
+            Start Chat
+          </button>
+        </div>
       </div>
     </section>
 
