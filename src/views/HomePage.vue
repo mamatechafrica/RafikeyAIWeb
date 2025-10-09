@@ -128,13 +128,13 @@ onMounted(async () => {
           </div>
         </div>
 
-        <div class="flex lg:w-[519px] w-full md:w-3/4 px-7 lg:px-0 mx-auto h-[69px]  lg:pt-[32px] leading-[150%] text-center lg:text-start">
-          <p class="font-outfit lg:text-[15px] text-[13px] font-[400] text-bodyText">
-            RAFIKEY, HELPS YOU MAKE INFORMED CHOICES - FROM CONTRACEPTION AND STI TESTING TO
-            UNDERSTANDING CONSENT - WHILE PROTECTING YOUR PRIVACY EVERY STEP OF THE WAY.
+        <div class="flex lg:w-[519px] w-full md:w-3/4 px-7 lg:px-0 mx-auto lg:pt-[32px] leading-[150%] text-center lg:text-start">
+          <p class="text-[15px] lg:text-[18px] font-pt-sans-regular text-shark-950">
+            Rafikey helps you make informed choices - from contraception and STI testing to
+            understanding consent - while protecting your privacy every step of the way.
           </p>
         </div>
-        <div class="lg:pt-20 ">
+        <div class="lg:pt-10">
           <div class="top-[670px]  lg:h-[63px] h-[49px] flex justify-center lg:justify-start lg:gap-[24px] gap-4">
             <button
               @click="registerHandler"
@@ -146,6 +146,7 @@ onMounted(async () => {
               >
             </button>
             <button
+              @click="$router.push('/chatbot')"
               class="btn btn-sm h-full font-pt-sans-regular bg-casablanca-300 py-[16px] lg:px-[48px] px-8 rounded-[8px]"
             >
               <span class="text-white font-semibold lg:text-xl text-lg">More Info</span>
@@ -153,8 +154,8 @@ onMounted(async () => {
           </div>
         </div>
       </div>
-      <div class="panel-2 hidden xl:h-screen pt-[45px] w-[681px] h-[711px] lg:flex justify-center  items-center ">
-        <div class="xl:w-[568px] xl:h-[568px] w-[380px] h-[380px] ">
+      <div class="panel-2 hidden xl:h-screen pt-[45px] w-[681px] h-[711px] lg:flex justify-center items-start lg:pt-[160px] xl:pt-[180px]">
+        <div class="xl:w-[400px] xl:h-[400px] w-[320px] h-[320px] ">
           <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="w-full " />
         </div>
       </div>
@@ -221,10 +222,11 @@ onMounted(async () => {
               />
             </div>
             <div class="lg:py-12 lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
-              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Talk to Someone</p>
+              <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Let's play a game</p>
               <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
-                Whether you have questions, need guidance, or just want to talk, our friendly Rafikey is here to help you anytime.
-                Start a conversation now and let Rafikey guide you to the answers, resources, and services that matter to you.
+                Rafikey’s quick games help you test your knowledge, explore real-life scenarios,
+                and earn points while having fun. Each challenge helps you build confidence in
+                understanding your body, choices, and relationships.
               </p>
             </div>
           </div>
@@ -283,14 +285,14 @@ onMounted(async () => {
               on topics like periods, STIs,consent and contraception.
             </p>
           </div>
-          <div class="flex lg:justify-start justify-center mx-auto lg:mx-0 h-[63px] w-[200px]">
+          <!-- <div class="flex lg:justify-start justify-center mx-auto lg:mx-0 h-[63px] w-[200px]">
             <button
               @click="registerHandler"
               class="btn btn-sm border-none h-full w-full shadow-[0_0_50px_0px] shadow-white/45  bg-casablanca-300 py-[16px]  px-[48px] rounded-xl"
             >
               <span class="text-white font-pt-sans-bold text-[24px]">Start Chat</span>
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -473,6 +475,7 @@ onMounted(async () => {
         </div>
       </div>
     </section>
+    -->
 
     <section class="pt-16 md:pt-20 lg:pt-24">
       <FooterComponent />
