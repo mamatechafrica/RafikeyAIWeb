@@ -69,13 +69,21 @@ import FooterComponent from '@/components/FooterComponent.vue'
           <p class="font-urbanist weight-[600] text-[16px[ lg:text-[18px] font-semibold leading-[24px]">Curious how Rafikey works? This video walks you through a real conversation with Rafikey — from asking questions to getting trusted information and finding the right service.</p>
         </div>
       </div>
-      <div class="relative justify-center items-center  lg:hidden flex">
-        <img src="@/assets/images/about-7-1.png" class="w-full" alt="chatting-experience-image"/>
-        <img  class="absolute left-36 top-1/3" src="@/assets/images/Polygon-1.png" alt="play-button"/>
+<!--      video-->
+
+      <div class="lg:hidden flex  w-3/4 h-3/4 p-6 bg-darkgray justify-center rounded-2xl items-center">
+        <video class=" w-3/4 autoplay">
+          <source src="../assets/video/rafikey-walkthrough.webm" type="video/webm">
+          <source src="@/assets/video/rafikey-walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <div  class="relative justify-center items-center hidden lg:flex">
-        <img src="@/assets/images/about-7.png" class="w-full hidden lg:block" alt="chatting-experience-image"/>
-        <img  class="absolute left-3/5 top-3/5" src="@/assets/images/Polygon-1.png" alt="play-button"/>
+      <div  class="hidden lg:flex w-3/4 h-3/4 p-6 bg-darkgray justify-center rounded-2xl items-center">
+        <video class=" w-3/4 autoplay">
+          <source src="../assets/video/rafikey-walkthrough.webm" type="video/webm">
+          <source src="@/assets/video/rafikey-walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
   </section>
      <section class="">
