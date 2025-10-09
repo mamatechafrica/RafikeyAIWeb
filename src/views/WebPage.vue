@@ -1,14 +1,16 @@
 <script setup lang="ts">
-
 import NavBar from '@/components/NavBar.vue'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRafikeyWebstore } from '@/stores'
 
 const showButton = ref(true)
-const openChatFrame = ref(false)
+const isChatFrameOpen = computed(() => rafikeyWebStore.openChatFrame)
 const chatbot_url = import.meta.env.VITE_APP_RAFIKEY_CHATBOT_FRONTEND as string
+const rafikeyWebStore = useRafikeyWebstore()
 
 const askRafikeyHandler = () => {
-  openChatFrame.value =  !openChatFrame.value
+  rafikeyWebStore.openChatFrame = !rafikeyWebStore.openChatFrame
+  // openChatFrame.value =  !openChatFrame.value
 }
 
 const handleScroll = () => {
@@ -32,22 +34,24 @@ onUnmounted(() => {
 })
 // https://chat.askrafikey.com
 
-const closeChatFrame = ()=>{
-  openChatFrame.value = false
+const closeChatFrame = () => {
+  rafikeyWebStore.openChatFrame = false
 }
-
+console.log(chatbot_url)
 </script>
 
 <template>
-  <div class="min-h-screen  relative ">
+  <div class="min-h-screen relative">
     <NavBar />
     <div
-
       v-show="showButton"
-      class="fixed bottom-0  left-0 right-0   z-50 flex justify-center items-center space-x-4 p-4 transition-opacity duration-300"
+      class="fixed bottom-0 left-0 right-0 z-50 flex justify-center items-center space-x-4 p-4 transition-opacity duration-300"
     >
-      <div class="w-[298px]  h-[69px] bg-darkgray rounded-full">
-        <div class="h-full flex w-full justify-between items-center px-[26px] cursor-pointer" @click="askRafikeyHandler" >
+      <div class="w-[298px] h-[69px] bg-darkgray rounded-full">
+        <div
+          class="h-full flex w-full justify-between items-center px-[26px] cursor-pointer"
+          @click="askRafikeyHandler"
+        >
           <div>
             <span class="text-white font-outfit text-[14px]">Ask Rafikey</span>
           </div>
@@ -58,29 +62,21 @@ const closeChatFrame = ()=>{
       </div>
     </div>
 
-
-    <RouterView #default="{ Component, route}">
+    <RouterView #default="{ Component, route }">
       <template v-if="Component">
-        <component :is="Component" :key="route.fullPath"/>
-
+        <component :is="Component" :key="route.fullPath" />
       </template>
-
     </RouterView>
 
-    <div  v-if="openChatFrame" class="fixed top-24 right-0" >
-    <div class="bg-gray-200 rounded-xl p-4">
-      <div class="flex justify-end p-1 cursor-pointer" @click="closeChatFrame">
-        <span class="material-icons-outlined">cancel</span>
+    <div v-if="isChatFrameOpen" class="fixed top-24 right-0 z-50">
+      <div class="bg-gray-200 rounded-xl p-4">
+        <div class="flex justify-end p-1 cursor-pointer" @click="closeChatFrame">
+          <span class="material-icons-outlined">cancel</span>
+        </div>
+        <iframe :src="`${chatbot_url}/guest-user`" class="lg:h-[600px] h-[400px]"></iframe>
       </div>
-      <iframe :src="`${chatbot_url}/guest-user`" class="h-[600px] "></iframe>
-
-    </div>
-
-
     </div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
