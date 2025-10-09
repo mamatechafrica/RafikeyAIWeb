@@ -18,7 +18,10 @@ const collapseSidebarSmall = ref(true);
 
   return {
     collapseSidebarSmall,
-    setCollapseSidebarSmall
+    setCollapseSidebarSmall,
+    openChatFrame,
+    setOpenChatFrame
+
   }
 
 })
