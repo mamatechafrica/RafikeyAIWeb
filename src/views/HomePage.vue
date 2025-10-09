@@ -296,7 +296,7 @@ onMounted(async () => {
     </section>
 
     <!--    fourth slide-->
-    <section
+    <!-- <section
       class="section  xl:h-screen flex items-center  lg:px-[80px]"
     >
       <div class="space-y-20 hidden lg:flex flex-col py-10  ">
@@ -426,7 +426,7 @@ onMounted(async () => {
           </SwiperSlide>
         </Swiper>
       </div>
-        </section>
+    </section> -->
 
     <!--    fifth slide-->
     <!--

@@ -4,7 +4,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 <template>
   <div class="w-11/12 mx-auto space-y-10 ">
-    <section class="xl:h-screen w-11/12 mx-auto pt-20 lg:pt-32">
+    <section class="w-11/12 mx-auto pt-20 lg:pt-32 pb-10">
       <div class="space-y-5">
         <div class="font-changa-one text-[24px] lg:text-[48px] text- lightGrayFour flex justify-center">
           <h2>Contact Us</h2>
@@ -37,7 +37,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
                 <p class="text-[16px] lg:text-[18px]  leading-[24px] font-urbanist weight-[600]">Got a question about how Rafikey works?</p>
                 <p class="text-[16px] lg:text-[18px]  leading-[24px] font-urbanist weight-[600]">Need help with your account?</p>
               </div>
-              <p class="font-urbanist w-[600] text-[16px] lg:text-[18px]  ">Email: <a href="mailto:rafikey@afrimedia.org"class="text-cerise-400">rafikey@afrimedia.org</a></p>
+              <p class="font-urbanist w-[600] text-[16px] lg:text-[18px]">Email: <a href="mailto:rafikey@afrimedia.org" class="text-cerise-400">rafikey@afrimedia.org</a></p>
             </div>
           </div>
         </div>
