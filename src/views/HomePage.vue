@@ -104,6 +104,10 @@ onMounted(async () => {
   //     })
   //   })
 })
+
+const goToPlayGameHandler = () =>{
+  window.location.href = `${import.meta.env.VITE_APP_RAFIKEY_CHATBOT_FRONTEND as string}/lets-play/welcome/plain/quiz`
+}
 </script>
 <template>
   <div class="panel overflow-hidden">
@@ -221,16 +225,19 @@ onMounted(async () => {
                 class="w-12 md:w-16  lg:w-20"
               />
             </div>
-            <div class="lg:py-12 lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
+            <div
+              @click="goToPlayGameHandler"
+              class="lg:py-12 cursor-pointer lg:space-y-3 lg:w-full w-3/4 mx-auto lg:px-4">
               <p class="font-pt-sans-bold lg:text-[28px] text-[16px] text-center">Let's play a game</p>
               <p class="text-[14px] lg:text-[16px] font-pt-sans-regular lg:text-center  text-bodyText">
-                Rafikey’s quick games help you test your knowledge, explore real-life scenarios,
+                Rafikey’s quick <a class="font-bold text-casablanca-300" href='https://chat.askrafikey.com/lets-play/welcome/plain/quiz'>games</a> help you test your knowledge, explore real-life scenarios,
                 and earn points while having fun. Each challenge helps you build confidence in
                 understanding your body, choices, and relationships.
               </p>
             </div>
           </div>
           <div
+
             class="bg-white rounded-xl lg:flex-col items-center px-8 lg:px-0 flex gap-4 lg:gap-0 shadow-2xl lg:py-10 py-4 lg:space-y-4"
           >
             <div class="lg:flex lg:justify-center">
