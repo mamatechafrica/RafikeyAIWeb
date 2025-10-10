@@ -3,6 +3,7 @@ import {
   createWebHistory,
   type RouteLocationNormalized,
 } from 'vue-router'
+import { ref } from 'vue'
 
 
 const router = createRouter({
@@ -43,12 +44,24 @@ const router = createRouter({
   ],
   scrollBehavior(to:RouteLocationNormalized, from:RouteLocationNormalized){
  return new Promise((resolve, reject)=>{
-   setTimeout(()=>{
-     resolve({
-       top: 0,
-       behavior: 'smooth'
-     })
-   }, 500)
+   const windowScreen = ref(window.innerWidth)
+   if(windowScreen.value < 768 ){
+     setTimeout(()=>{
+       console.log("small screens")
+       resolve({
+         top: 0,
+         behavior: 'smooth'
+       })
+     }, 500)
+   } else {
+     setTimeout(()=>{
+       console.log("large screens")
+       resolve({
+          top: 0,
+          behavior: 'smooth'
+       })
+     }, 0)
+   }
    }
  )
   }
