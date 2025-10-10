@@ -128,7 +128,7 @@ const goToPlayGameHandler = () =>{
 
         <div class="flex w-full items-center lg:hidden justify-center ">
           <div class="w-1/3 lg:w-full">
-            <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" />
+            <img src="@/assets/images/rafikey-mascot-hero-section.svg" alt="rafikey-image" />
           </div>
         </div>
 
@@ -160,7 +160,7 @@ const goToPlayGameHandler = () =>{
       </div>
       <div class="panel-2 hidden xl:h-screen pt-[45px] w-[681px] h-[711px] lg:flex justify-center items-start lg:pt-[160px] xl:pt-[180px]">
         <div class="xl:w-[400px] xl:h-[400px] w-[320px] h-[320px] ">
-          <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="w-full " />
+          <img src="@/assets/images/rafikey-mascot-hero-section.svg" alt="rafikey-image" class="w-full " />
         </div>
       </div>
     </section>
