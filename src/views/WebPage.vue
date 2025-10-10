@@ -70,6 +70,19 @@ const scrollTopHandler = () =>{
         <component :is="Component" :key="route.fullPath" />
       </template>
     </RouterView>
+    <!--    floating button-->
+
+    <div
+      @click.stop="scrollTopHandler"
+      v-if="!showButton"
+      class="fixed bottom-24 right-10 z-50 cursor-pointer "
+    >
+      <div
+        class="shadow-[0_10px_6px_rgba(0,0,0,0.3)] rounded-full border-2 border-casablanca-300 md:h-12 md:w-12 h-10 w-10 flex justify-center items-center"
+      >
+        <span class="material-icons-outlined font-bold  rotate-90 text-casablanca-300">arrow_back_ios</span>
+      </div>
+    </div>
 
     <div v-if="isChatFrameOpen" class="fixed top-24 right-0 z-50">
       <div class="bg-gray-200 rounded-xl p-4">
