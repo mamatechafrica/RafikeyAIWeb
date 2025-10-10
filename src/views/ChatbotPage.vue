@@ -6,7 +6,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 <template>
   <div class="">
 <!--    first slide-->
-    <section class="xl:h-screen  space-y-10 flex py-16 md:py-24 xl:py-30 flex-col items-center">
+    <section class="space-y-5 flex py-16 md:py-24 xl:py-30 flex-col items-center">
       <div class="flex flex-col items-center ">
           <h2 class="font-changa-one lg:text-[48px] text-[24px] tracking-[-3%]  text-lightGrayFour">Hello</h2>
           <h2 class="font-changa-one lg:text-[48px] text-[24px] tracking-[-3%] text-lightGrayFour" >I am Rafikey</h2>
@@ -15,8 +15,8 @@ import FooterComponent from '@/components/FooterComponent.vue'
       <div class="w-3/4 lg:w-2/3 xl:w-1/3" >
         <p class="lg:text-[20px] text-[14px] leading-[120%]  font-urbanist font-bold text-black text-center">I'm here whenever you need someone to talk to - no pressure, no judgement and always private. You can tell me how you're feeling, ask questions or just vent. I've got you.</p>
       </div>
-      <div class=" w-1/3 lg:w-full flex justify-center items-center">
-        <img src="@/assets/images/Rafikey-mascot.png" alt="chatbot-image" />
+      <div class="w-1/3 lg:w-1/5 flex justify-center items-center">
+        <img src="@/assets/images/rafikey-mascot3.svg" alt="chatbot-image" />
       </div>
     </section>
 

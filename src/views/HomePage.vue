@@ -3,11 +3,11 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import { nextTick, onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper/modules'
-import image_1 from '@/assets/images/avator-web.png'
-import image_2 from '@/assets/images/avator-web.png'
-import image_3 from '@/assets/images/avator-web.png'
+// import { Swiper, SwiperSlide } from 'swiper/vue'
+// import { Navigation } from 'swiper/modules'
+// import image_1 from '@/assets/images/avator-web.png'
+// import image_2 from '@/assets/images/avator-web.png'
+// import image_3 from '@/assets/images/avator-web.png'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -17,38 +17,38 @@ gsap.defaults({
   ease: 'none',
 })
 
-const carouselInfo = [
-  {
-    id: 1,
-    avatorSrc: image_1,
-    name: 'Jaden Kiptoo',
-    location: 'Machakos',
-    testimonial:
-      'I didn’t know where to go for help, but Rafikey guided me to a nearby health center in minutes. It felt like talking to a caring friend who knew exactly what I needed.',
-  },
-  {
-    id: 2,
-    avatorSrc: image_2,
-    name: 'Halima Wakesho',
-    location: 'Kilifi',
-    testimonial:
-      'Rafikey was so easy to use! I just answered a few questions and instantly got directions to the right service. Rafikey saved me so much time and stress.',
-  },
-  {
-    id: 3,
-    avatorSrc: image_3,
-    name: 'John Odhiambo',
-    location: 'Nanyuki',
-    testimonial:
-      'I was unsure about my next step, but rafikey made everything clear. It gave me trusted information and connected me to the right place without any hassle.',
-  }
-] as {
-  id: number
-  avatorSrc: string
-  name: string
-  location: string
-  testimonial: string
-}[]
+// const carouselInfo = [
+//   {
+//     id: 1,
+//     avatorSrc: image_1,
+//     name: 'Jaden Kiptoo',
+//     location: 'Machakos',
+//     testimonial:
+//       'I didn’t know where to go for help, but Rafikey guided me to a nearby health center in minutes. It felt like talking to a caring friend who knew exactly what I needed.',
+//   },
+//   {
+//     id: 2,
+//     avatorSrc: image_2,
+//     name: 'Halima Wakesho',
+//     location: 'Kilifi',
+//     testimonial:
+//       'Rafikey was so easy to use! I just answered a few questions and instantly got directions to the right service. Rafikey saved me so much time and stress.',
+//   },
+//   {
+//     id: 3,
+//     avatorSrc: image_3,
+//     name: 'John Odhiambo',
+//     location: 'Nanyuki',
+//     testimonial:
+//       'I was unsure about my next step, but rafikey made everything clear. It gave me trusted information and connected me to the right place without any hassle.',
+//   }
+// ] as {
+//   id: number
+//   avatorSrc: string
+//   name: string
+//   location: string
+//   testimonial: string
+// }[]
 
 const registerHandler = () => {
     window.location.href = 'https://chat.askrafikey.com/auth'
@@ -264,7 +264,7 @@ const goToPlayGameHandler = () =>{
       <div class=" flex w-full items-center justify-between pt-0">
         <div class="w-1/2 xl:pt-[48px] lg:flex hidden items-center justify-start">
           <div class="flex items-end justify-center xl:h-[546px] xl:w-[546px] ">
-            <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" class="" />
+            <img src="@/assets/images/rafikey-mascot2.svg" alt="rafikey-image" class="" />
           </div>
         </div>
 
@@ -281,7 +281,7 @@ const goToPlayGameHandler = () =>{
           </div>
           <div class="flex lg:hidden pt-6 md:pt-8 lg:pt-10 justify-center">
             <div class="w-2/5">
-              <img src="@/assets/images/Rafikey-mascot.png" alt="rafikey-image" />
+              <img src="@/assets/images/rafikey-mascot2.svg" alt="rafikey-image" />
             </div>
           </div>
           <div>
