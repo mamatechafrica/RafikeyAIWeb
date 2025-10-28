@@ -116,7 +116,7 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
     ...{ class: "panel-1 lg:pt-[166px] py-16 md:py-20 lg:py-0 space-y-12 md:space-y-16 lg:space-y-0" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "lg:w-[519px] w-[241px] mx-auto  font-changa-one " },
+    ...{ class: "lg:w-[519px] w-[241px] mx-auto  font-changa-one" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
     ...{ class: "text-deep-cove-950 text-center lg:text-start lg:leading-[74px] leading-[32px] tracking-[3%] lg:!text-[79px] !text-[24px]" },
