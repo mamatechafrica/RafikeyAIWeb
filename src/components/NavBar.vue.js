@@ -34,14 +34,14 @@ let __VLS_directives;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "fixed hidden lg:block left-0  h-[102px] right-0 top-0 bg-white z-50" },
+    ...{ class: "fixed hidden lg:block left-0  h-[80px] right-0 top-0 bg-white z-50" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "flex bg-white items-center h-full justify-between py-4 px-[80px] gap-4 " },
+    ...{ class: "flex  items-center h-full justify-between py-4 px-[80px] gap-4 " },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     ...{ onClick: (__VLS_ctx.homeHandler) },
-    ...{ class: "cursor-pointer flex items-end pt-1 w-[180px] " },
+    ...{ class: "cursor-pointer flex items-end pt-1 w-[120px] " },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.img, __VLS_intrinsicElements.img)({
     src: "@/assets/images/Rafikey-logo.png",
@@ -297,13 +297,12 @@ var __VLS_3;
 /** @type {__VLS_StyleScopedClasses['hidden']} */ ;
 /** @type {__VLS_StyleScopedClasses['lg:block']} */ ;
 /** @type {__VLS_StyleScopedClasses['left-0']} */ ;
-/** @type {__VLS_StyleScopedClasses['h-[102px]']} */ ;
+/** @type {__VLS_StyleScopedClasses['h-[80px]']} */ ;
 /** @type {__VLS_StyleScopedClasses['right-0']} */ ;
 /** @type {__VLS_StyleScopedClasses['top-0']} */ ;
 /** @type {__VLS_StyleScopedClasses['bg-white']} */ ;
 /** @type {__VLS_StyleScopedClasses['z-50']} */ ;
 /** @type {__VLS_StyleScopedClasses['flex']} */ ;
-/** @type {__VLS_StyleScopedClasses['bg-white']} */ ;
 /** @type {__VLS_StyleScopedClasses['items-center']} */ ;
 /** @type {__VLS_StyleScopedClasses['h-full']} */ ;
 /** @type {__VLS_StyleScopedClasses['justify-between']} */ ;
@@ -314,7 +313,7 @@ var __VLS_3;
 /** @type {__VLS_StyleScopedClasses['flex']} */ ;
 /** @type {__VLS_StyleScopedClasses['items-end']} */ ;
 /** @type {__VLS_StyleScopedClasses['pt-1']} */ ;
-/** @type {__VLS_StyleScopedClasses['w-[180px]']} */ ;
+/** @type {__VLS_StyleScopedClasses['w-[120px]']} */ ;
 /** @type {__VLS_StyleScopedClasses['flex']} */ ;
 /** @type {__VLS_StyleScopedClasses['xl:gap-10']} */ ;
 /** @type {__VLS_StyleScopedClasses['gap-4']} */ ;

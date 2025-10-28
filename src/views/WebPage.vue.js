@@ -47,7 +47,7 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
 const __VLS_0 = __VLS_asFunctionalComponent(NavBar, new NavBar({}));
 const __VLS_1 = __VLS_0({}, ...__VLS_functionalComponentArgsRest(__VLS_0));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "fixed bottom-0 left-0 right-0 z-50 flex justify-center items-center space-x-4 p-4 transition-opacity duration-300" },
+    ...{ class: "fixed bottom-0 left-0 right-0 z-[99999] flex justify-center items-center space-x-4 p-4 transition-opacity duration-300" },
 });
 __VLS_asFunctionalDirective(__VLS_directives.vShow)(null, { ...__VLS_directiveBindingRestFields, value: (__VLS_ctx.showButton) }, null, null);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
@@ -124,7 +124,7 @@ if (__VLS_ctx.isChatFrameOpen) {
 /** @type {__VLS_StyleScopedClasses['bottom-0']} */ ;
 /** @type {__VLS_StyleScopedClasses['left-0']} */ ;
 /** @type {__VLS_StyleScopedClasses['right-0']} */ ;
-/** @type {__VLS_StyleScopedClasses['z-50']} */ ;
+/** @type {__VLS_StyleScopedClasses['z-[99999]']} */ ;
 /** @type {__VLS_StyleScopedClasses['flex']} */ ;
 /** @type {__VLS_StyleScopedClasses['justify-center']} */ ;
 /** @type {__VLS_StyleScopedClasses['items-center']} */ ;
