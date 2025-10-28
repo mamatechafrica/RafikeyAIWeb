@@ -35,8 +35,8 @@ const router = createRouter({
           component: ()=> import('@/views/ContactPage.vue'),
         },
         {
-          path: '/faqs',
-          name: 'faqs',
+          path: '/service-finder',
+          name: 'service-finder',
           component: ()=> import('@/views/FAQSPage.vue'),
         }
       ]
@@ -45,6 +45,7 @@ const router = createRouter({
   scrollBehavior(to:RouteLocationNormalized, from:RouteLocationNormalized){
  return new Promise((resolve, reject)=>{
    const windowScreen = ref(window.innerWidth)
+   // for small devices I delay for 500ms that the side nav closes before scrolling to top
    if(windowScreen.value < 768 ){
      setTimeout(()=>{
        console.log("small screens")
