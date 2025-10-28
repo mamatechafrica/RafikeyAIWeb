@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import Combobox from '@/components/Combobox.vue'
 import DialogModal from '@/components/DialogModal.vue'
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 const servicePrompt = 'All Service Types'
 const countyPrompt = 'All Counties'
 import MapView from '@/components/MapView.vue'
@@ -13,10 +13,7 @@ export interface ClinicDetail {
   address: string
   services: string[]
   hours: Record<string, string>
-  contact: {
-    email: string
-    phone: string
-  }
+  contact: Record<string, string>
 }
 
 const clinicDetails = [
@@ -186,7 +183,7 @@ const services = [
   { id: 3, name: 'Counseling' },
 ]
 
-const moreClinicDetails = ref<ClinicDetail | null>(null)
+const moreClinicDetails = ref<ClinicDetail>()
 const isShowDialog = ref(false)
 
 const colors = ref([
@@ -319,6 +316,7 @@ const handleService = (val: string) => {
         :is-open="isShowDialog"
         @close="isShowDialog = !isShowDialog"
         class="font-pt-sans-regular"
+        v-if="moreClinicDetails"
       >
         <template #title>
           <div class="space-y-4">
@@ -367,7 +365,7 @@ const handleService = (val: string) => {
               <span class="material-icons-outlined text-blue-500">{{
                 cont === 'email' ? 'email' : 'phone'
               }}</span>
-              <span class="text-sm md:text-lg">{{ moreClinicDetails?.contact[cont] }}</span>
+              <span class="text-sm md:text-lg">{{ moreClinicDetails.contact[cont] }}</span>
             </div>
           </div>
         </template>
