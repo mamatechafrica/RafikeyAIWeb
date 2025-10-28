@@ -113,7 +113,7 @@ const goToPlayGameHandler = () =>{
   <div class="panel overflow-hidden">
     <section class="xl:h-screen lg:px-[80px] overflow-hidden flex lg:justify-between justify-center w-full">
       <div class="panel-1 lg:pt-[166px] py-16 md:py-20 lg:py-0 space-y-12 md:space-y-16 lg:space-y-0">
-        <div class="lg:w-[519px] w-[241px] mx-auto  font-changa-one ">
+        <div class="lg:w-[519px] w-[241px] mx-auto  font-changa-one">
           <p
             class="text-deep-cove-950 text-center lg:text-start lg:leading-[74px] leading-[32px] tracking-[3%] lg:!text-[79px] !text-[24px]"
           >
