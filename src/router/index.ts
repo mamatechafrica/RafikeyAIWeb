@@ -37,7 +37,7 @@ const router = createRouter({
         {
           path: '/service-finder',
           name: 'service-finder',
-          component: ()=> import('@/views/FAQSPage.vue'),
+          component: ()=> import('@/views/ServiceFinder.vue'),
         }
       ]
     }
