@@ -39,7 +39,7 @@ const registerHandler = () => {
 <template>
 
   <div class="fixed hidden lg:block left-0  h-[80px] right-0 top-0 bg-white z-50">
-    <div class="flex  items-center h-full justify-between py-4 px-[80px] gap-4 ">
+    <div class="flex  items-center h-full py-4 px-[80px] gap-24">
 <!--      icon-->
       <div class="cursor-pointer flex items-end pt-1 w-[120px] " @click="homeHandler">
         <img src="@/assets/images/Rafikey-logo.png" alt="rafikey-name-image" class="">
@@ -53,16 +53,16 @@ const registerHandler = () => {
         </div>
       </div>
 <!--      buttons-->
-      <div class="flex h-[47px] w-[249px] gap-[53px]">
-        <button @click="loginHandler">
-          <span class="font-pt-sans-bold text-lightGrayTwo text-[24px] text-nowrap">Log In</span>
-        </button>
-        <button
-          @click="registerHandler"
-          class="btn btn-sm h-full backdrop-blur-sm   shadow-[0_0_50px_0px] shadow-navBarShadowBackground/50 border-none  bg-darkGrayOne rounded-[8px] py-[8px] px-[28px]">
-          <span class="font-pt-sans-bold text-white text-[24px]">Register</span>
-        </button>
-      </div>
+<!--      <div class="flex h-[47px] w-[249px] gap-[53px]">-->
+<!--        <button @click="loginHandler">-->
+<!--          <span class="font-pt-sans-bold text-lightGrayTwo text-[24px] text-nowrap">Log In</span>-->
+<!--        </button>-->
+<!--        <button-->
+<!--          @click="registerHandler"-->
+<!--          class="btn btn-sm h-full backdrop-blur-sm   shadow-[0_0_50px_0px] shadow-navBarShadowBackground/50 border-none  bg-darkGrayOne rounded-[8px] py-[8px] px-[28px]">-->
+<!--          <span class="font-pt-sans-bold text-white text-[24px]">Register</span>-->
+<!--        </button>-->
+<!--      </div>-->
     </div>
 
   </div>
@@ -139,20 +139,20 @@ const registerHandler = () => {
                           <span class="font-urbanist text-[16px] " :class="[tabStore.activeTab === tab.value? 'text-white': 'text-stone-400']">{{ tab.name }}</span>
                         </div>
                       </div>
-                      <div class="absolute bottom-0 w-full cursor-pointer">
-                        <div
-                          @click="loginHandler"
-                          class="flex gap-4 hover:bg-shark-100 p-2">
-                          <span class="material-icons-outlined">login</span>
-                          <span class="font-urbanist text-[16px]">Login</span>
-                        </div>
-                        <div
-                          @click="registerHandler"
-                          class="flex gap-4 hover:bg-shark-100 p-2 rounded">
-                          <span class="material-icons-outlined text-shark-950">person_add</span>
-                          <span class="hover:text-shark-950 font-urbanist text-[16px]">Register</span>
-                        </div>
-                      </div>
+<!--                      <div class="absolute bottom-0 w-full cursor-pointer">-->
+<!--                        <div-->
+<!--                          @click="loginHandler"-->
+<!--                          class="flex gap-4 hover:bg-shark-100 p-2">-->
+<!--                          <span class="material-icons-outlined">login</span>-->
+<!--                          <span class="font-urbanist text-[16px]">Login</span>-->
+<!--                        </div>-->
+<!--                        <div-->
+<!--                          @click="registerHandler"-->
+<!--                          class="flex gap-4 hover:bg-shark-100 p-2 rounded">-->
+<!--                          <span class="material-icons-outlined text-shark-950">person_add</span>-->
+<!--                          <span class="hover:text-shark-950 font-urbanist text-[16px]">Register</span>-->
+<!--                        </div>-->
+<!--                      </div>-->
                     </div>
                   </div>
                 </DialogPanel>

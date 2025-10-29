@@ -195,7 +195,7 @@ const reload = () =>{
                   class="bg-white p-5 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:-translate-x-1 border-2 border-transparent transition-all"
                   id="card1"
                 >
-                  <h3 class="text-xl font-bold text-gray-900">{{ clinic.name }}</h3>
+<!--                  <h3 class="text-xl font-bold text-gray-900">{{ clinic.clinic_name }}</h3>-->
                   <p class="text-sm text-pink-500 dark:text-pink-400 font-medium mt-1">
                     {{ clinic.clinic_name}}
                   </p>

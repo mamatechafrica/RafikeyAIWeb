@@ -9,6 +9,12 @@ const collapseSidebarSmall = ref(true);
 const BASE_URL = import.meta.env.VITE_BACKEND_URL_API
 
   const openChatFrame = useStorage('isChatOpen', false)
+  // const controller = new AbortController()
+  // const { signal} = controller.signal
+  // const timeout = setTimeout(()=>{
+  //   controller.abort()
+  //
+  // }, 5000)
   async function getClinics () {
     // fetch clinics from api
  try{
