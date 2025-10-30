@@ -174,8 +174,8 @@ const reload = () =>{
       </section>
       <div class="container h-96 mx-auto px-4 py-8">
         <div v-if="!isLoading && !isError" >
-          <div class="lg:grid lg:grid-cols-10 lg:gap-8">
-            <div class="lg:col-span-4 mb-8 lg:mb-0">
+          <div class="lg:grid lg:grid-cols-10 lg:gap-8" v-if="rafikeyStore.clinics">
+            <div  class="lg:col-span-4 mb-8 lg:mb-0">
               <div class="block lg:hidden mb-4">
                 <button
                   class="w-full bg-casablanca-300 text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2"
@@ -214,6 +214,11 @@ const reload = () =>{
             <div class="lg:col-span-6 lg:block hidden">
               <MapView  />
             </div>
+          </div>
+          <div v-else  class=" h-full flex justify-center items-center flex-col gap-4">
+            <img  src="@/assets/images/no-data.svg" alt="no-data" class="md:w-64 w-44" />
+            <span class="text-lg md:text-xl">No data yet</span>
+
           </div>
         </div>
         <div v-if="isLoading" class="flex h-full justify-center items-center">
