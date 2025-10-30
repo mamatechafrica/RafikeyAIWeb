@@ -8,7 +8,7 @@ import MapView from '@/components/MapView.vue'
 import { useRafikeyWebstore } from '@/stores'
 
 
-const rafikeyStore = useRafikeyWebstore()
+
 export interface ClinicDetail {
   id: number
   clinic_name: string
@@ -23,8 +23,7 @@ export interface ClinicDetail {
   phone_combined: string | null
   email_combined: string | null
 }
-
-const clinicDetails = ref<ClinicDetail []>([])
+const rafikeyStore = useRafikeyWebstore()
 const isLoading = ref(false)
 const isError = ref(false)
 
@@ -35,7 +34,7 @@ onMounted(() => {
       if(res){
         if(res.result === 'success'){
           console.log(res.data)
-          clinicDetails.value = res.data
+          rafikeyStore.clinics = res.data.clinics
           isLoading.value = false
         } else{
           isError.value = true
@@ -112,7 +111,7 @@ const colors = ref([
 
 const openModal = (clinicId: number) => {
   isShowDialog.value = true
-  selectedClinic.value = clinicDetails.value.find(clinic => clinic.id === clinicId)
+  selectedClinic.value = rafikeyStore.clinics.find(clinic => clinic.id === clinicId)
 }
 
 const handleCategory = (val: string) => {
@@ -190,7 +189,7 @@ const reload = () =>{
               <!--            Clinics display-->
               <div class="space-y-4 md:max-h-[70vh] overflow-y-auto pr-2" id="clinicList">
                 <div
-                  v-for="clinic in clinicDetails"
+                  v-for="clinic in rafikeyStore.clinics"
                   :key="clinic.id"
                   class="bg-white p-5 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:-translate-x-1 border-2 border-transparent transition-all"
                   id="card1"
@@ -222,7 +221,7 @@ const reload = () =>{
         </div>
         <div v-if="isError" class=" gap-2 flex-col w-full h-full  flex justify-center items-center">
           <img src="@/assets/images/no-data.svg"  alt="no-data" class="w-32"/>
-          <span class="text-lg md:text-xl">Something went wrong please</span>
+          <span class="text-lg md:text-xl">Something went wrong please refresh</span>
           <button
             @click="reload"
             class="btn rounded-lg shadow-none border-none bg-casablanca-300 btn-sm md:btn-lg normal-case"
