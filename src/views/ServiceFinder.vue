@@ -34,7 +34,7 @@ onMounted(() => {
       if(res){
         if(res.result === 'success'){
           rafikeyStore.clinics = res.data
-          console.log(res.data.length)
+          console.log(res.data)
         } else{
           isError.value = true
         }
@@ -295,11 +295,15 @@ const reload = () =>{
 <!--              }}</span>-->
 <!--              <span class="text-sm md:text-lg">{{ selectedClinic.contact[cont] }}</span>-->
 <!--            </div>-->
-            <div
-              v-for="line in selectedClinic.phone.split('\n')"
-              class="flex gap-2">
-              <span class="material-icons-outlined text-blue-500">phone</span>
-              <span>{{line}}</span>
+            <div  v-if="selectedClinic.phone">
+              <div
+
+                v-for="(line, index) in selectedClinic.phone.split('\n')"
+                :key="index"
+                class="flex gap-2">
+                <span class="material-icons-outlined text-blue-500">phone</span>
+                <span>{{line}}</span>
+              </div>
             </div>
             <div
               class="flex gap-2" v-if="selectedClinic.email_combined">
@@ -307,7 +311,7 @@ const reload = () =>{
               <span>{{selectedClinic.email_combined}}</span>
             </div>
 
-            <div class="flex gap-2">
+            <div class="flex gap-2" v-if="selectedClinic.website">
               <span class="material-icons-outlined text-blue-500">language</span>
               <a
                 :href="selectedClinic.website"
@@ -317,7 +321,7 @@ const reload = () =>{
                 {{selectedClinic.website}}
               </a>
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2" v-if="selectedClinic.google_link">
               <span class="material-icons-outlined text-blue-500">map</span>
               <a
                 :href="selectedClinic.google_link"
