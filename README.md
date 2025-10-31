@@ -1,39 +1,85 @@
-# rafikey-ai-web
+# Rafikey AI Web
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the official web frontend for the Rafikey AI service. Rafikey provides a safe and private space for young people to access information and services related to Sexual and Reproductive Health and Rights (SRHR).
 
-## Recommended IDE Setup
+This project is built with Vue 3 and Vite, providing a fast and modern development experience.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Table of Contents
 
-## Type Support for `.vue` Imports in TS
+- [Rafikey AI Web](#rafikey-ai-web)
+  - [Table of Contents](#table-of-contents)
+  - [Tech Stack](#tech-stack)
+  - [Project Setup](#project-setup)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Available Scripts](#available-scripts)
+  - [Environment Variables](#environment-variables)
+  - [Contributing](#contributing)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Tech Stack
 
-## Customize configuration
+This project is built using a modern web development stack:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Framework**: [Vue 3](https://vuejs.org/) (with Composition API and `<script setup>`)
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Routing**: Vue Router
+- **State Management**: Pinia
+- **Styling**: Tailwind CSS with DaisyUI
+- **Animation**: GSAP (with ScrollTrigger)
+- **Linting & Formatting**: ESLint and Prettier
 
 ## Project Setup
 
-```sh
-npm install
+Follow these steps to get the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js (v22.x or later recommended)
+- A package manager like `npm`, `yarn`, or `pnpm`.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone <your-repository-url>
+    cd RafikeyAIWeb
+    ```
+
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+## Available Scripts
+
+You can run the following commands from the root of the project:
+
+- **`npm run dev`**: Starts the Vite development server with Hot Module Replacement (HMR).
+
+- **`npm run build`**: Compiles the project for production. This includes type-checking and creates an optimized build in the `dist` directory.
+
+- **`npm run preview`**: Serves the production build from the `dist` directory locally to preview it.
+
+- **`npm run lint`**: Lints the codebase using ESLint and attempts to fix any issues.
+
+- **`npm run format`**: Formats the code in the `src/` directory using Prettier.
+
+- **`npm run zip-dist`**: Creates a `rafikey-web.zip` file containing the contents of the `dist` directory.
+
+## Environment Variables
+
+The project uses environment variables for configuration. You can create a `.env` file in the root of the project to set them. An example is `VITE_APP_RAFIKEY_CHATBOT_FRONTEND`, which is used to link to the chatbot application.
+
+```
+# .env
+VITE_APP_RAFIKEY_CHATBOT_FRONTEND=https://chat.askrafikey.com
 ```
 
-### Compile and Hot-Reload for Development
+## Contributing
 
-```sh
-npm run dev
-```
+Contributions are welcome! Please follow the standard fork, branch, and pull request workflow. Ensure your code passes the linting and formatting checks before submitting a pull request.
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+*This README was generated to help you get started. Feel free to edit and expand it as the project grows!*
