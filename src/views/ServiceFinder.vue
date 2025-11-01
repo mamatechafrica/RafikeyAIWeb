@@ -1,13 +1,8 @@
 <script lang="ts" setup>
-import Combobox from '@/components/Combobox.vue'
 import DialogModal from '@/components/DialogModal.vue'
-import { computed, onMounted, ref } from 'vue'
-const servicePrompt = 'All Service Types'
-const countyPrompt = 'All Counties'
+import { onMounted, ref } from 'vue'
 import MapView from '@/components/MapView.vue'
 import { useRafikeyWebstore } from '@/stores'
-
-
 
 export interface ClinicDetail {
   id: number
@@ -49,47 +44,6 @@ onMounted(() => {
     })
 })
 
-const counties = [
-  { id: 1, name: 'Mombasa' },
-  { id: 2, name: 'Kwale' },
-  { id: 3, name: 'Kilifi' },
-  { id: 4, name: 'Tana River' },
-  { id: 5, name: 'Lamu' },
-  { id: 6, name: 'Taita-Taveta' },
-  { id: 7, name: 'Garissa' },
-  { id: 8, name: 'Wajir' },
-  { id: 9, name: 'Mandera' },
-  { id: 10, name: 'Marsabit' },
-  { id: 11, name: 'Isiolo' },
-  { id: 12, name: 'Meru' },
-  { id: 13, name: 'Tharaka-Nithi' },
-  { id: 14, name: 'Embu' },
-  { id: 15, name: 'Kitui' },
-  { id: 16, name: 'Machakos' },
-  { id: 17, name: 'Makueni' },
-  { id: 18, name: 'Nyandarua' },
-  { id: 19, name: 'Nyeri' },
-  { id: 20, name: 'Kirinyaga' },
-  { id: 21, name: 'Murang’a' },
-  { id: 22, name: 'Kiambu' },
-  { id: 23, name: 'Turkana' },
-  { id: 24, name: 'West Pokot' },
-  { id: 25, name: 'Samburu' },
-  { id: 26, name: 'Trans Nzoia' },
-  { id: 27, name: 'Uasin Gishu' },
-  { id: 28, name: 'Elgeyo-Marakwet' },
-  { id: 29, name: 'Nandi' },
-  { id: 30, name: 'Baringo' },
-  { id: 31, name: 'Laikipia' },
-  { id: 32, name: 'Nakuru' },
-  { id: 33, name: 'Nairobi' },
-]
-
-const services = [
-  { id: 1, name: 'Contraception' },
-  { id: 2, name: 'STI Testing' },
-  { id: 3, name: 'Counseling' },
-]
 
 
 const selectedClinic = ref<ClinicDetail>()
@@ -114,13 +68,6 @@ const openModal = (clinicId: number) => {
   selectedClinic.value = rafikeyStore.clinics.find(clinic => clinic.id === clinicId)
 }
 
-const handleCategory = (val: string) => {
-  console.log(val)
-}
-
-const handleService = (val: string) => {
-  console.log(val)
-}
 
 const reload = () =>{
   window.location.reload()
@@ -141,7 +88,7 @@ const reload = () =>{
           </p>
         </div>
       </section>
-      <section class="py-8 bg-white shadow-md sticky md:top-20 top-10 z-40">
+      <section class="py-8 bg-white shadow-md sticky top-20 z-40">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-4 lg:gap-4 gap-8">
             <div class="relative md:col-span-2">
@@ -155,20 +102,6 @@ const reload = () =>{
                 type="text"
               />
             </div>
-            <div>
-              <Combobox
-                :combo-props="services"
-                :prompt="servicePrompt"
-                @combo-choice="handleService"
-              />
-            </div>
-            <div>
-              <Combobox
-                :combo-props="counties"
-                :prompt="countyPrompt"
-                @combo-choice="handleCategory"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -176,15 +109,6 @@ const reload = () =>{
         <div v-if="!isError && !isLoading">
           <div class="lg:grid lg:grid-cols-10 lg:gap-8" v-if="rafikeyStore.clinics">
             <div  class="lg:col-span-4 mb-8 lg:mb-0">
-              <div class="block lg:hidden mb-4">
-                <button
-                  class="w-full bg-casablanca-300 text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2"
-                  id="toggleMapBtn"
-                >
-                  <span class="material-icons-outlined">map</span>
-                  <span>View on Map</span>
-                </button>
-              </div>
 
               <!--            Clinics display-->
               <div class="space-y-4 md:max-h-[70vh] overflow-y-auto pr-2" id="clinicList">
@@ -262,39 +186,8 @@ const reload = () =>{
               <p>Services Offered</p>
             </div>
             <div class="flex gap-2 flex-wrap mt-2">
-<!--              <div-->
-<!--                v-for="(service, index) in selectedClinic?.services"-->
-<!--                :key="service"-->
-<!--                class="flex"-->
-<!--              >-->
-<!--                <div-->
-<!--                  class="px-3 py-1 rounded-full text-sm font-medium w-fit text-white"-->
-<!--                  :class="[`bg-${colors[Number(index.toString().charAt(0))]}-100`]"-->
-<!--                >-->
-<!--                  <span-->
-<!--                    class="font-bold"-->
-<!--                    :class="[`text-${colors[Number(index.toString().charAt(0))]}-500`]"-->
-<!--                    >{{ service }}</span-->
-<!--                  >-->
-<!--                </div>-->
-<!--              </div>-->
               <span>{{selectedClinic.services}}</span>
             </div>
-            <div>
-<!--              <p class="font-bold">Operating Hours</p>-->
-<!--              <div v-for="time in hourKey" :key="time">-->
-<!--                <span class="font-bold text-sm md:text-lg" :style="{ textTransform: 'capitalize' }"-->
-<!--                  >{{ time }}:</span-->
-<!--                >-->
-<!--                <span class="ml-2 text-sm md:text-lg">{{ selectedClinic?.hours[time] }}</span>-->
-<!--              </div>-->
-            </div>
-<!--            <div v-for="cont in contactKeys" :key="cont" class="flex gap-2">-->
-<!--              <span class="material-icons-outlined text-blue-500">{{-->
-<!--                cont === 'email' ? 'email' : 'phone'-->
-<!--              }}</span>-->
-<!--              <span class="text-sm md:text-lg">{{ selectedClinic.contact[cont] }}</span>-->
-<!--            </div>-->
             <div  v-if="selectedClinic.phone">
               <div
 
