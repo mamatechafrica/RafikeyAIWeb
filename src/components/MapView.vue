@@ -70,9 +70,9 @@ watch(
 
 const errorMessage = ref<string>('')
 const loading = ref<boolean>(false)
-const getLocation = async () => {
- try{
-   const googleMaps = await useGoogleMaps()
+const initializeMapDesktop = async () => {
+  try {
+    const googleMaps = await useGoogleMaps()
 
    //   check for geolocation support
    if (!navigator.geolocation) {
