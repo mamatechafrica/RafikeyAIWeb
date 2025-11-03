@@ -117,11 +117,10 @@ const serviceClassMap = computed(() => {
 
 const openModal = (clinicId: number) => {
   isShowDialog.value = true
-  selectedClinic.value = rafikeyStore.clinics.find(clinic => clinic.id === clinicId)
+  selectedClinic.value = clinicsData.value.find((clinic) => clinic.id === clinicId)
 }
 
-
-const reload = () =>{
+const reload = () => {
   window.location.reload()
 }
 const destLng = ref<number | null>(null)
@@ -138,21 +137,21 @@ const getDirections = () =>{
 
 </script>
 <template>
-  <div class="pt-[80px]">
-    <main class="min-h-screen font-pt-sans-regular">
-      <section class="flex-col grad1 py-10">
-        <div class="text-center justify-center items-center">
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white leading-tight"
-          >
-            Find a Clinic Near You
-          </h1>
-          <p class="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-            Search for SRHR-friendly clinics and support centers near you.
-          </p>
-        </div>
-      </section>
-      <section class="py-8 bg-white shadow-md sticky top-20 z-40">
+  <div class="h-screen md:overflow-y-hidden">
+    <main class=" font-pt-sans-regular">
+<!--      <section class="flex-col grad1 py-10">-->
+<!--        <div class="text-center justify-center items-center">-->
+<!--          <h1-->
+<!--            class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white leading-tight"-->
+<!--          >-->
+<!--            Find a Clinic Near You-->
+<!--          </h1>-->
+<!--          <p class="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">-->
+<!--            Search for SRHR-friendly clinics and support centers near you.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </section>-->
+      <section class="lg:py-8 py-6 bg-white shadow-md fixed left-0 right-0 top-10 lg:top-14 z-9999">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-4 lg:gap-4 gap-8">
             <div class="relative md:col-span-2">
@@ -171,9 +170,13 @@ const getDirections = () =>{
       </section>
       <div class="container h-96 mx-auto px-4 py-8">
         <div v-if="!isError && !isLoading">
-          <div class="lg:grid lg:grid-cols-10 lg:gap-8" v-if="rafikeyStore.clinics">
-            <div  class="lg:col-span-4 mb-8 lg:mb-0">
-
+          <div class="lg:grid lg:grid-cols-10 lg:gap-8" v-if="filteredClinics.length > 0">
+            <div class="lg:col-span-4 mb-8 lg:mb-0">
+              <div v-if="isLoadingSearch">
+                <div v-for="n in 3" :key="n" class="lg:col-span-4 mb-8">
+                  <LoadingShimmer />
+                </div>
+              </div>
               <!--            Clinics display-->
               <div class="space-y-4 md:max-h-[70vh] overflow-y-auto pr-2" id="clinicList">
                 <div
