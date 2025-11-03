@@ -54,17 +54,17 @@ const initializeMapDesktop = async () => {
         const deviceLat = pos.coords.latitude
         const deviceLng = pos.coords.longitude
 
-       //   initialize map centered between user and destination
-       const map = new googleMaps.Map(document.getElementById('map') as HTMLDivElement, {
-         center: { lat: deviceLat, lng: deviceLng },
-         zoom: 10,
-       })
-       //   Add marker for user's location
-       new googleMaps.Marker({
-         position: { lat: deviceLat, lng: deviceLng },
-         map,
-         title: 'Current location',
-       })
+        //   initialize map centered between user and destination
+        const map = new googleMaps.Map(document.getElementById('map') as HTMLDivElement, {
+          center: { lat: deviceLat, lng: deviceLng },
+          zoom: 10,
+        })
+        //   Add marker for user's location
+        new google.maps.Marker({
+          position: { lat: deviceLat, lng: deviceLng },
+          map,
+          title: 'Current location',
+        })
 
        new googleMaps.Marker({
          position: { lat: props.destLatitude, lng: props.destLongitude as number },
