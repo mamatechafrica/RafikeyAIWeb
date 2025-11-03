@@ -8,7 +8,7 @@ export const useRafikeyWebstore = defineStore('rafikeyWebstore', () => {
 
 const collapseSidebarSmall = ref(true);
 const BASE_URL = import.meta.env.VITE_BACKEND_URL_API
-  const clinics = ref<ClinicDetail []>([])
+
 
   const openChatFrame = useStorage('isChatOpen', false)
   async function getClinics () {
