@@ -32,12 +32,9 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const scrollTopHandler = () =>{
-  console.log("Scroll to top handler called")
+const scrollTopHandler = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
-
-
 </script>
 
 <template>
@@ -53,10 +50,18 @@ const scrollTopHandler = () =>{
           @click="askRafikeyHandler"
         >
           <div>
-            <span class="text-white font-outfit text-[14px]">Ask Rafikey</span>
+            <span v-if="!rafikeyWebStore.openChatFrame" class="text-white font-outfit text-[14px]"
+              >Ask Rafikey</span
+            >
+            <span v-else class="text-white font-outfit text-[14px]">Close Rafikey</span>
           </div>
           <div class="bg-lightGrayOne rounded-full h-8 w-8 flex justify-center items-center">
-            <span class="material-icons-outlined text-shark-950">arrow_upward</span>
+            <span
+              v-if="!rafikeyWebStore.openChatFrame"
+              class="material-icons-outlined text-shark-950"
+              >arrow_upward</span
+            >
+            <span v-else class="material-icons-outlined text-shark-950">close</span>
           </div>
         </div>
       </div>
