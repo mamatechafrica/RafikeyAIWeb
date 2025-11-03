@@ -72,12 +72,12 @@ const initializeMapDesktop = async () => {
           title: props.clinicName,
         })
 
-       //   set up direction service
-       const directionsService = new googleMaps.DirectionsService()
-       const directionsRenderer = new googleMaps.DirectionsRenderer({
-         map,
-         suppressMarkers: true, //we added custom markers
-       })
+        //   set up direction service
+        const directionsService = new googleMaps.DirectionsService()
+        const directionsRenderer = new googleMaps.DirectionsRenderer({
+          map,
+          suppressMarkers: true, //we added custom markers
+        })
 
         //   Request route
         directionsService.route(
