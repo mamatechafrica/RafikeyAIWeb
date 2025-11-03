@@ -74,8 +74,6 @@ onMounted(() => {
     })
 })
 
-
-
 const selectedClinic = ref<ClinicDetail>()
 const isShowDialog = ref(false)
 
@@ -126,6 +124,18 @@ const openModal = (clinicId: number) => {
 const reload = () =>{
   window.location.reload()
 }
+const destLng = ref<number | null>(null)
+const destLat = ref<number | null>(null)
+const clinicName = ref<string>('')
+
+const getDirections = () =>{
+  if(selectedClinic.value){
+    destLat.value = selectedClinic.value.latitude
+    destLng.value = selectedClinic.value.longitude
+    clinicName.value = selectedClinic.value.clinic_name
+  }
+}
+
 </script>
 <template>
   <div class="pt-[80px]">
