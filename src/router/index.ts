@@ -1,10 +1,5 @@
-import {
-  createRouter,
-  createWebHistory,
-  type RouteLocationNormalized,
-} from 'vue-router'
+import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 import { ref } from 'vue'
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,7 +12,7 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
-          component: ()=> import('@/views/HomePage.vue'),
+          component: () => import('@/views/HomePage.vue'),
         },
         {
           path: '/about',
@@ -27,45 +22,57 @@ const router = createRouter({
         {
           path: '/chatbot',
           name: 'chatbot',
-          component: ()=>import('@/views/ChatbotPage.vue'),
+          component: () => import('@/views/ChatbotPage.vue'),
         },
         {
           path: '/contacts',
           name: 'contacts',
-          component: ()=> import('@/views/ContactPage.vue'),
+          component: () => import('@/views/ContactPage.vue'),
         },
         {
           path: '/service-finder',
           name: 'service-finder',
-          component: ()=> import('@/views/ServiceFinder.vue'),
+          component: () => import('@/views/ServiceFinder.vue'),
+        },
+      ],
+      beforeEnter: (to, from, next) => {
+        const lastVisitedPath = localStorage.getItem('activeTab')
+        if(lastVisitedPath && lastVisitedPath !== to.name) {
+          next({
+            name: lastVisitedPath
+          })
+        } else{
+          next()
         }
-      ]
-    }
+
+      }
+    },
+
   ],
-  scrollBehavior(to:RouteLocationNormalized, from:RouteLocationNormalized){
- return new Promise((resolve, reject)=>{
-   const windowScreen = ref(window.innerWidth)
-   // for small devices I delay for 500ms that the side nav closes before scrolling to top
-   if(windowScreen.value < 768 ){
-     setTimeout(()=>{
-       console.log("small screens")
-       resolve({
-         top: 0,
-         behavior: 'smooth'
-       })
-     }, 500)
-   } else {
-     setTimeout(()=>{
-       console.log("large screens")
-       resolve({
-          top: 0,
-          behavior: 'smooth'
-       })
-     }, 0)
-   }
-   }
- )
-  }
+
+  scrollBehavior(to: RouteLocationNormalized, from: RouteLocationNormalized) {
+    return new Promise((resolve, reject) => {
+      const windowScreen = ref(window.innerWidth)
+      // for small devices I delay for 500ms that the side nav closes before scrolling to top
+      if (windowScreen.value < 768) {
+        setTimeout(() => {
+          console.log('small screens')
+          resolve({
+            top: 0,
+            behavior: 'smooth',
+          })
+        }, 500)
+      } else {
+        setTimeout(() => {
+          console.log('large screens')
+          resolve({
+            top: 0,
+            behavior: 'smooth',
+          })
+        }, 0)
+      }
+    })
+  },
 })
 
 export default router

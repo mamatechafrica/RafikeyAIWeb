@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue'
 import { useStorage } from '@vueuse/core'
-import { ClinicDetail } from '@/views/ServiceFinder.vue'
+
 
 
 export const useRafikeyWebstore = defineStore('rafikeyWebstore', () => {

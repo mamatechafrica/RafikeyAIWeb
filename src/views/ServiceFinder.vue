@@ -197,7 +197,7 @@ watch(()=> filteredClinics.value, (newVal)=>{
                     {{ clinic.location }}
                   </p>
                   <button
-                    class="mt-4 w-full bg-sky-200 text-primary text-sky-500 py-2 px-4 rounded-lg font-semibold hover:bg-sky-400/20 transition-colors"
+                    class="mt-4 w-full bg-sky-200  text-sky-500 py-2 px-4 rounded-lg font-semibold hover:bg-sky-400/20 transition-colors"
                     @click="openModal(clinic.id)"
                   >
                     View Details
@@ -314,7 +314,7 @@ watch(()=> filteredClinics.value, (newVal)=>{
           <div class="w-full px-4 justify-center gap-4 flex">
             <button
               @click.stop="getDirections"
-              class="btn w-full btn-ghost border-none bg-link-water-200 shadow-none rounded-lg py-2 px-4 mr-2"
+              class="btn w-full btn-ghost border-none bg-sky-200  text-sky-500  shadow-none rounded-lg py-2 px-4 mr-2"
             >
               <span class="material-icons-outlined">assistant_direction</span>
               <span class="text-xs md:text-sm">Get Direction</span>

@@ -27,13 +27,6 @@ const homeHandler = () =>{
     name: 'home'
   })
 }
-const loginHandler = () => {
-  window.location.href = 'https://chat.askrafikey.com/auth/login'
-}
-
-const registerHandler = () => {
-  window.location.href = 'https://chat.askrafikey.com/auth'
-}
 </script>
 
 <template>
