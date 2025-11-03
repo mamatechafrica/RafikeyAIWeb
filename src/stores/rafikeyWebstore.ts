@@ -73,7 +73,6 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL_API
     openChatFrame,
     setOpenChatFrame,
     getClinics,
-    clinics
   }
 
 })
