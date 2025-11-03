@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import * as L from 'leaflet'
+import { onMounted, ref, watch } from 'vue'
 import { useGoogleMaps } from '@/composables/useGoogleMaps'
-
-
 
 const props = defineProps<{
   destLatitude: number
@@ -51,11 +48,11 @@ const initializeMapDesktop = async () => {
       return
     }
 
-   //   Get user's location
-   navigator.geolocation.getCurrentPosition(
-     (pos) => {
-       const deviceLat = pos.coords.latitude
-       const deviceLng = pos.coords.longitude
+    //   Get user's location
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const deviceLat = pos.coords.latitude
+        const deviceLng = pos.coords.longitude
 
        //   initialize map centered between user and destination
        const map = new googleMaps.Map(document.getElementById('map') as HTMLDivElement, {
